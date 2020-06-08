@@ -13,7 +13,7 @@
     <div class="wrapper-gray">
       <div class="wrapper-centre-gray">
         <router-view/>
-        <a href="" ><div class="button"> Hallo Iris</div></a>
+        <a href=""><div class="button"> Hallo Iris</div></a>
         <h1>Kopie en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
       </div>
     </div>
@@ -56,10 +56,6 @@
   *{
     margin: 0;
     padding: 0;
-  }
-
-  a{
-    text-decoration: none;
   }
 
   #nav {
@@ -140,6 +136,4 @@
     justify-content: center;
     flex-direction: column;
   }
-
-
 </style>
