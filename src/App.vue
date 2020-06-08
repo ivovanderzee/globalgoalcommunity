@@ -8,38 +8,7 @@
       <router-link to="/question">Vragenmuur</router-link> |
       <router-link to="/login">Login</router-link>
     </div>
-
-
-    <div class="wrapper-gray">
-      <div class="wrapper-centre-gray">
-        <router-view/>
-        <a href=""><div class="button"> Hallo Iris</div></a>
-        <h1>Kopie en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="wrapper">
-      <div class="wrapper-centre">
-        <h1>Kopieeren en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="wrapper-lgreen">
-      <div class="wrapper-centre-lgreen">
-        <h1>Kopieeren en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
-      </div>
-    </div>
-
-
-
+    <router-view/>
 
   </div>
 </template>
