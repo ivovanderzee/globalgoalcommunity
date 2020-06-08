@@ -6,12 +6,39 @@
             <router-link to="/event">Event</router-link> |
             <router-link to="/solution">Oplossingen</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
-            <router-link to="/login">Login</router-link>
+            <router-link to="/login">Login </router-link>
         </div>
-        <router-view/>
+        <router-view @authenticated="setAuthenticated" />
 
     </div>
 </template>
+<script>
+    export default {
+        name: 'App',
+        data() {
+            return {
+                authenticated: false,
+                mockAccount: {
+                    username: "ggc",
+                    password: "ad"
+                }
+            }
+        },
+        mounted() {
+            if(!this.authenticated) {
+                this.$router.replace({ name: "login" });
+            }
+        },
+        methods: {
+            setAuthenticated(status) {
+                this.authenticated = status;
+            },
+            logout() {
+                this.authenticated = false;
+            }
+        }
+    }
+</script>
 
 <style>
     #app {
