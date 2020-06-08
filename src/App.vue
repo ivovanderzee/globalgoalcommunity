@@ -8,29 +8,138 @@
       <router-link to="/question">Vragenmuur</router-link> |
       <router-link to="/login">Login</router-link>
     </div>
-    <router-view/>
+
+
+    <div class="wrapper-gray">
+      <div class="wrapper-centre-gray">
+        <router-view/>
+        <a href="" ><div class="button"> Hallo Iris</div></a>
+        <h1>Kopie en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="wrapper">
+      <div class="wrapper-centre">
+        <h1>Kopieeren en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="wrapper-lgreen">
+      <div class="wrapper-centre-lgreen">
+        <h1>Kopieeren en dan kan je hier kan  in werken, dan werk je binnen de grid</h1>
+      </div>
+    </div>
+
+
+
+
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 
-#nav {
-  padding: 30px;
-}
+  *{
+    margin: 0;
+    padding: 0;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  a{
+    text-decoration: none;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  #nav {
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+  }
+
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
+
+  .color-green{
+    color:  #388E3C;
+  }
+
+  .button{
+    height: 48px;
+    width: 100px;
+    background-color: #388E3C;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 7px;
+  }
+
+  .wrapper{
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper-gray{
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper-lgreen{
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper-centre{
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .wrapper-centre-gray{
+    width: 80vw;
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .wrapper-centre-lgreen{
+    width: 80vw;
+    background-color: #C8E6C9;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
 </style>
