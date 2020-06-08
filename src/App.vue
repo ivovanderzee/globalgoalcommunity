@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <div id="nav">
+            <router-link to="/"><img src="./assets/logoGGC.png"></router-link>
             <router-link to="/">Home</router-link> |
             <router-link to="/about">Over ons</router-link> |
             <router-link to="/event">Event</router-link> |
@@ -8,8 +9,50 @@
             <router-link to="/question">Vragenmuur</router-link> |
             <router-link to="/login">Login</router-link>
         </div>
+
         <router-view/>
 
+        <div id="footer">
+            <div id="footer-context">
+                <div class="footer-colom">
+                    <img src="./assets/logoGGC.png">
+                </div>
+                <div class="footer-colom">
+                    <p class="bold">17 SDG's</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+                <div class="footer-colom">
+                    <p class="bold">Community</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+                <div class="footer-colom">
+                    <p class="bold">Over ons</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+                <div class="footer-colom">
+                    <p class="bold">Contact</p>
+                    <ul>
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-line"></div>
+        </div>
     </div>
 </template>
 
@@ -32,83 +75,131 @@
     }
 
     #nav {
-        padding: 20px;
+        padding: 10px 0;
         position: fixed;
         width: 100%;
         background-color: white;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav img{
+        height: 30px;
+        margin-right: 5vw;
     }
 
     #nav a {
         font-weight: bold;
+        margin: 10px;
         color: #2c3e50;
     }
 
     #nav a.router-link-exact-active {
-        color: #42b983;
+        color: #388E3C;
     }
 
-    .color-green{
+    #footer{
+        width: 100vw;
+        padding-top: 30px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #footer-context{
+        width: 70vw;
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+
+    #footer-context ul{
+          list-style-type: none;
+    }
+
+    #footer-context li{
+       margin-top: 10px;
+    }
+
+    .footer-colom{
+       text-align: left;
+        width: 10vw;
+        padding-bottom: 30px;
+    }
+
+    .footer-colom img{
+        height: 60px;
+    }
+
+    #footer-line{
+        background-color: #388E3C;
+        width: 100vw;
+        padding: 4px;
+    }
+
+    .Color-green{
         color:  #388E3C;
     }
 
-    .button{
-        height: 48px;
-        width: 100px;
-        background-color: #388E3C;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+    .Color-white{
         color: white;
-        border-radius: 7px;
     }
 
-    .wrapper{
+    .bold{
+        font-weight: bolder;
+    }
+
+    /*--------------*/
+    .Wrapper{
         width: 100vw;
-        background-color: blue;
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .wrapper-gray{
+    .Wrapper-gray{
         width: 100vw;
-        background-color: blue;
+        background-color: #dfdfdf;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .wrapper-lgreen{
+    .Wrapper-lgreen{
         width: 100vw;
-        background-color: blue;
+        background-color: #C8E6C9;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .wrapper-centre{
-        width: 80vw;
+    .Wrapper-centre{
+        width: 70vw;
         background-color: white;
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
 
-    .wrapper-centre-gray{
-        width: 80vw;
+    .Wrapper-centre-gray{
+        width: 70vw;
         background-color: #dfdfdf;
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
 
-    .wrapper-centre-lgreen{
-        width: 80vw;
+    .Wrapper-centre-lgreen{
+        width: 70vw;
         background-color: #C8E6C9;
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
-
-
 </style>
