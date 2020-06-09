@@ -1,88 +1,31 @@
 <template>
     <div id="app">
         <div id="nav">
-            <router-link to="/"><img src="./assets/logoGGC.png"></router-link>
             <router-link to="/">Home</router-link> |
             <router-link to="/about">Over ons</router-link> |
             <router-link to="/event">Event</router-link> |
             <router-link to="/solution">Oplossingen</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
-            <router-link to="/login">Login</router-link>
+            <router-link to="/login">Login </router-link>
         </div>
-
         <router-view @authenticated="setAuthenticated" />
 
-        <div id="footer">
-            <div id="footer-context">
-                <div class="footer-colom">
-                    <img src="./assets/logoGGC.png">
-                </div>
-                <div class="footer-colom">
-                    <p class="bold">17 SDG's</p>
-                    <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-                <div class="footer-colom">
-                    <p class="bold">Community</p>
-                    <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-                <div class="footer-colom">
-                    <p class="bold">Over ons</p>
-                    <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-                <div class="footer-colom">
-                    <p class="bold">Contact</p>
-                    <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="footer-line"></div>
-        </div>
     </div>
 </template>
 
-<!--<script>-->
-<!--    export default {-->
-<!--        name: 'App',-->
-<!--        data() {-->
-<!--            return {-->
-<!--                authenticated: false,-->
-<!--                mockAccount: {-->
-<!--                    username: "ggc",-->
-<!--                    password: "ad"-->
-<!--                }-->
-<!--            }-->
-<!--        },-->
-<!--        mounted() {-->
-<!--            if(!this.authenticated) {-->
-<!--                this.$router.replace({ name: "login" });-->
-<!--            }-->
-<!--        },-->
-<!--        methods: {-->
-<!--            setAuthenticated(status) {-->
-<!--                this.authenticated = status;-->
-<!--            },-->
-<!--            logout() {-->
-<!--                this.authenticated = false;-->
-<!--            }-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
+<script>
+    export default {
+       name: 'App',
+       data() {
+           return {
+               authenticated: false,
+             mockAccount: {
+                  username: "ggc",
+                 password: "ad"
+             }
+         }}}
+
+</script>
 
 <style>
     #app {
@@ -230,4 +173,6 @@
         justify-content: center;
         flex-direction: column;
     }
+
+
 </style>
