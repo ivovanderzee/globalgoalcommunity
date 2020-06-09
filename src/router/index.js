@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import LoginComponent from "../views/Login.vue"
+import SecureComponent from "../views/secure.vue"
 
-Vue.use(VueRouter);
-  const routes = [
+Vue.use(VueRouter)
+
+
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -37,10 +41,10 @@ Vue.use(VueRouter);
     name: 'Login',
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
   }
-];
+]
 
 const router = new VueRouter({
   routes
-});
+})
 
 export default router
