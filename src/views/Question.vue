@@ -1,5 +1,14 @@
 <template>
-    <div class="question">
-        <h1>This is an question page</h1>
-    </div>
+    <Header Text="Vragenmuur" />
 </template>
+
+<script>
+    import Header from '@/components/Header.vue'
+
+
+    export default {
+        name: 'Login',
+        components: {
+            Header,
+        }}
+</script>

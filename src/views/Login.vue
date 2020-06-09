@@ -1,8 +1,6 @@
 <template>
 
     <div id="login">
-        <h1>Login</h1>
-
 
             <div id="formContent">
                 <!-- Tabs Titles -->
@@ -15,12 +13,19 @@
                     <button type="button" v-on:click="login()">Login</button>
                 </form>
 
+
             </div>
+        <Footer />
         </div>
 </template>
 <script>
+
+
     export default {
         name: 'Login',
+        components: {
+
+        },
         data() {
             return {
                 input: {
@@ -31,10 +36,10 @@
         },
         methods: {
             login() {
-                if(this.input.username != "" && this.input.password != "") {
-                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
+                if (this.input.username != "" && this.input.password != "") {
+                    if (this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
                         this.$emit("authenticated", true);
-                        this.$router.replace({ name: "secure" });
+                        this.$router.replace({name: "secure"});
                     } else {
                         console.log("The username and / or password is incorrect");
                     }
@@ -42,9 +47,8 @@
                     console.log("A username and password must be present");
                 }
             }
-        },
+        }}
 
-    }
 </script>
 <style scoped>
     a {
@@ -77,15 +81,18 @@
         width: 100%;
         min-height: 100%;
         padding: 20px;
+
     }
 
     button{
         height: 48px;
-        width: 100px;
+        width: auto;
+        margin:20px;
+        padding: 0 2vw;
         background-color: #388E3C;
         color: white;
-        margin: 4%;
         border-radius: 7px;
+
     }
     #formContent {
         -webkit-border-radius: 10px 10px 10px 10px;
@@ -125,5 +132,5 @@
         background-color: #fff;
         border-bottom: 2px solid #5fbae9;
     }
-    
+
 </style>
