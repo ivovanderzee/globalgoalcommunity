@@ -6,7 +6,9 @@
     <SearchInitatief msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
 
     <BannerAddInitatief btnText="Naar de vragemuur"/>
+
   </div>
+
 </template>
 
 <script>
@@ -17,6 +19,7 @@ import SolutionBlock from '@/components/SolutionBlock.vue'
 import SearchInitatief from '@/components/SearchInitatief.vue'
 import BannerAddInitatief from '@/components/BannerAddInitatief.vue'
 
+
 export default {
   name: 'Home',
   components: {
@@ -25,6 +28,7 @@ export default {
     SolutionBlock,
     SearchInitatief,
     BannerAddInitatief,
+
   }
 }
 </script>

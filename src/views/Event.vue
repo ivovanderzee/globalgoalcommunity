@@ -1,5 +1,14 @@
 <template>
-    <div class="event">
-        <h1>This is an event page</h1>
-    </div>
+    <Header Text="Events" />
 </template>
+
+<script>
+    import Header from '@/components/Header.vue'
+
+
+    export default {
+        name: 'Login',
+        components: {
+            Header,
+        }}
+</script>
