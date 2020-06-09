@@ -56,33 +56,18 @@
     </div>
 </template>
 
-<!--<script>-->
-<!--    export default {-->
-<!--        name: 'App',-->
-<!--        data() {-->
-<!--            return {-->
-<!--                authenticated: false,-->
-<!--                mockAccount: {-->
-<!--                    username: "ggc",-->
-<!--                    password: "ad"-->
-<!--                }-->
-<!--            }-->
-<!--        },-->
-<!--        mounted() {-->
-<!--            if(!this.authenticated) {-->
-<!--                this.$router.replace({ name: "login" });-->
-<!--            }-->
-<!--        },-->
-<!--        methods: {-->
-<!--            setAuthenticated(status) {-->
-<!--                this.authenticated = status;-->
-<!--            },-->
-<!--            logout() {-->
-<!--                this.authenticated = false;-->
-<!--            }-->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
+<script>
+    export default {
+        name: 'App',
+        data() {
+            return {
+                authenticated: false,
+                mockAccount: {
+                    username: "ggc",
+                    password: "ad"
+                }
+            }}}
+</script>
 
 <style>
     #app {
