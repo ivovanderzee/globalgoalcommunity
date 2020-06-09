@@ -10,7 +10,7 @@
             <router-link to="/login">Login</router-link>
         </div>
 
-        <router-view/>
+        <router-view @authenticated="setAuthenticated" />
 
         <div id="footer">
             <div id="footer-context">
@@ -55,6 +55,34 @@
         </div>
     </div>
 </template>
+
+<!--<script>-->
+<!--    export default {-->
+<!--        name: 'App',-->
+<!--        data() {-->
+<!--            return {-->
+<!--                authenticated: false,-->
+<!--                mockAccount: {-->
+<!--                    username: "ggc",-->
+<!--                    password: "ad"-->
+<!--                }-->
+<!--            }-->
+<!--        },-->
+<!--        mounted() {-->
+<!--            if(!this.authenticated) {-->
+<!--                this.$router.replace({ name: "login" });-->
+<!--            }-->
+<!--        },-->
+<!--        methods: {-->
+<!--            setAuthenticated(status) {-->
+<!--                this.authenticated = status;-->
+<!--            },-->
+<!--            logout() {-->
+<!--                this.authenticated = false;-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
 
 <style>
     #app {
