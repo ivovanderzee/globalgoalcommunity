@@ -4,7 +4,6 @@
     <Categories msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
     <SolutionBlock msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
     <SearchInitatief msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
-
     <BannerAddInitatief btnText="Naar de vragemuur"/>
   </div>
 </template>
@@ -20,7 +19,7 @@ import BannerAddInitatief from '@/components/BannerAddInitatief.vue'
 export default {
   name: 'Home',
   components: {
-    HomeHeader ,
+    HomeHeader,
     Categories,
     SolutionBlock,
     SearchInitatief,

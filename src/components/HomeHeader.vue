@@ -18,9 +18,11 @@
 
     export default {
         name: 'HomeHeader',
-        components: {GreenButton},
         props: {
-            msg: String
+            btnText: String
+        },
+        components: {
+            GreenButton
         },
         data() {
             return {

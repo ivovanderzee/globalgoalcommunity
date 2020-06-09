@@ -3,9 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import LoginComponent from "../views/Login.vue"
 import SecureComponent from "../views/secure.vue"
-
 Vue.use(VueRouter)
-
 
 const routes = [
   {
