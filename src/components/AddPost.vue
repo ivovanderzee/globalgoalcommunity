@@ -27,7 +27,7 @@
 
 <style scoped>
     .AddPost{
-        background-color: saddlebrown;
+        background-color: #B9630C;
         width: auto;
         padding: 20px 30px ;
         color: white;
