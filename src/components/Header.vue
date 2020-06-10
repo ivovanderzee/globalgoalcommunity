@@ -1,6 +1,5 @@
 <template>
-    <div class="header">
-        
+    <div :style="cssProps" class="header">
         <p>{{ Text }}</p>
     </div>
 
@@ -8,8 +7,15 @@
 <script>
 
 export default {
-name: 'header',
-props: ['Text']
+    name: 'header',
+    props: ['Text'],
+    data() {
+        return {
+            cssProps: {
+                backgroundImage: `url(${require('@/assets/extraHeader.jpg')})`,
+            }
+        }
+    }
 }
 </script>
 
@@ -23,6 +29,8 @@ props: ['Text']
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-size: cover;
+        background-position: bottom;
     }
 
 
@@ -31,6 +39,4 @@ props: ['Text']
         font-weight: bold;
         font-size:7vh;
     }
-
-
 </style>
