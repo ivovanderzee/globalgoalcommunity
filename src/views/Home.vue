@@ -27,7 +27,6 @@ export default {
     SolutionBlock,
     SearchInitatief,
     BannerAddInitatief,
-
   }
 }
 </script>
