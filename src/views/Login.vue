@@ -1,5 +1,4 @@
 <template>
-
     <div id="login">
             <div id="formContent">
                 <!-- Tabs Titles -->
@@ -16,8 +15,6 @@
         </div>
 </template>
 <script>
-
-
     export default {
         name: 'Login',
         components: {

@@ -52,7 +52,7 @@
 
     .HomeCategories-left{
         width: 100px;
-        height: 10vh;
+        height: 15vh;
         left: 0;
         display: flex;
         justify-content: center;
@@ -74,7 +74,7 @@
 
     .HomeCategories-right{
         width: 100px;
-        height: 10vh;
+        height: 15vh;
         right: 0;
         top: 0;
         display: flex;
@@ -97,15 +97,15 @@
 
     .HomeCategories-icon{
         width: 100vw;
-        height: 10vh;
+        height: 15vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .HomeCategories-SDG{
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;

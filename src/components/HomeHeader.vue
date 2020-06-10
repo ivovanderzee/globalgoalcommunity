@@ -42,8 +42,9 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: #dfdfdf;
+        background-color: #388E3C;
         background-size: 100%;
+        background-repeat: no-repeat;
     }
 
     .HomeHeader h1{

@@ -15,7 +15,7 @@
         },
         methods: {
             mouseover: function(){
-                this.message = 'Upload solution'
+                this.message = 'Oplossing uploaden'
             },
             mouseleave: function(){
                 this.message = ''

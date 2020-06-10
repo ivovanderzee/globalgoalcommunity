@@ -7,7 +7,7 @@
             <router-link to="/event">Events</router-link> |
             <router-link to="/solution">Oplossingen</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
-            <router-link to="/login">Login</router-link>
+<!--            <router-link to="/login">Login</router-link>-->
         </div>
 
         <router-view @authenticated="setAuthenticated" />

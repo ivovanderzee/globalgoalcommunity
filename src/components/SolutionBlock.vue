@@ -2,6 +2,7 @@
         <div class="Wrapper">
             <div class="Wrapper-centre">
                 <div class="SolutionBlock">
+<!--                    vanaf hier moet ik foreach loopen-->
                     <div class="SolutionBlock-block">
                         <div class="SolutionBlock-block-image"></div>
                         <div class="SolutionBlock-block-text">
@@ -10,6 +11,13 @@
                                 <p>Joanne Ye | 23-06-2020</p>
                                 <i class="far fa-heart"></i>
                             </div>
+
+<!--                    Dit is een test print uit de database -->
+<!--                            <li  v-for="post in posts" v-bind:key="post">-->
+<!--                                {{ post.name }}-->
+<!--                            </li>-->
+
+                             {{ post }}
                         </div>
                     </div>
                 </div>
@@ -18,10 +26,48 @@
 </template>
 
 <script>
+    // import db from "../main"
+    import Vue from 'vue'
+    import { firestorePlugin } from 'vuefire'
+    import firebase from 'firebase/app'
+    import 'firebase/firestore'
+
+    Vue.use(firestorePlugin);
+
+    firebase.initializeApp({
+        databaseURL: "https://globalgoalscommunity.firebaseio.com",
+        projectId: "globalgoalscommunity",
+    });
+
+    const db = firebase.firestore();
+
     export default {
         name: 'SolutionBlock',
-        props: {
-            msg: String
+        // props: {
+        //     post_id: null,
+        //     name: null,
+        //     position: null
+        // },
+        data(){
+            return{
+                posts: [],
+                post: {
+                    post_id: null,
+                    name: null,
+                    position: null
+                }
+            }
+        },
+        created() {
+            db.collection("posts").get().then(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    console.log(doc.id, " => ", doc.data());
+                    let post = doc.data();
+
+                    // console.log(post);
+                    this.posts.push(post);
+                })
+            })
         }
     }
 </script>

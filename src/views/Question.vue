@@ -3,6 +3,7 @@
         <Header Text="Vragenmuur" />
         <question-post></question-post>
         <event-questionwall></event-questionwall>
+        <AddPost></AddPost>
     </div>
 </template>
 
@@ -10,10 +11,12 @@
     import Header from '@/components/Header.vue'
     import QuestionPost from '@/components/QuestionPost.vue'
     import EventQuestionwall from '@/components/EventsQuestionwall.vue'
+    import AddPost from "../components/AddPost";
 
     export default {
         name: 'Login',
         components: {
+            AddPost,
             Header,
             QuestionPost,
             EventQuestionwall
