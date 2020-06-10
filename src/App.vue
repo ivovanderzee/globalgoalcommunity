@@ -4,7 +4,7 @@
             <router-link to="/"><img src="./assets/logoGGC.png"></router-link>
             <router-link to="/">Home</router-link> |
             <router-link to="/about">Over ons</router-link> |
-            <router-link to="/event">Event</router-link> |
+            <router-link to="/event">Events</router-link> |
             <router-link to="/solution">Oplossingen</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
             <router-link to="/login">Login</router-link>

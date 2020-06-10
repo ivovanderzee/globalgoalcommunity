@@ -1,7 +1,6 @@
 <template>
 
     <div id="login">
-
             <div id="formContent">
                 <!-- Tabs Titles -->
                 <h2> Log in</h2>
@@ -12,8 +11,6 @@
                     <input type="password" name="password" v-model="input.password" placeholder="Password" />
                     <button type="button" v-on:click="login()">Login</button>
                 </form>
-
-
             </div>
         <Footer />
         </div>
@@ -69,8 +66,6 @@
         color: #388E3C;
     }
 
-
-
     /* STRUCTURE */
 
     #login {
@@ -79,9 +74,9 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        min-height: 100%;
+        min-height: 80vh;
         padding: 20px;
-
+        background-color: #ebebeb;
     }
 
     button{
