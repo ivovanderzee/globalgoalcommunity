@@ -6,22 +6,21 @@
                 <H2 class="bold">{{ titleText }}</H2>
                 <br>
                 <p>{{ Text }}</p>
-
-
+                </div>
             </div>
+        <div class="Text-colom">
+            <img class="left.pic" src="img" />
+    </div>
 
-        </div>
+
+
     </div>
 </template>
 
 <script>
     export default {
         name: 'Textblock',
-        props: {
-            imageUrl: String,
-            Text: String,
-            titleText: String
-        }
+        props: ['titleText', 'Text', 'img']
     }
 </script>
 
@@ -42,6 +41,7 @@
     #Text-context{
         width: 70vw;
         margin: 7vh;
+        display: flex;
         justify-content: space-evenly;
         list-style-type: none;
     }
@@ -52,7 +52,7 @@
         padding-bottom: 30px;
     }
 
-    .Text-colom img{
+    .left.left.pic img{
         height: 60px;
     }
 

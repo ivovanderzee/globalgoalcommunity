@@ -7,7 +7,7 @@ Op deze website vinden leden van het netwerk elkaar binnen de community. SDG Ned
 
 Naast het faciliteren van dit professionele netwerk, betrekken we ook een breder publiek bij de doelen. Dat doen we onder meer met de SDG Stedentrip. Met de rubriek Doe Mee! bieden we handvatten om zelf actie te ondernemen.
 
-Het bureau van de stichting SDG Nederland bestaat uit zes werknemers met kantoor in het Tropeninstituut (KIT) in Amsterdam."/>
+Het bureau van de stichting SDG Nederland bestaat uit zes werknemers met kantoor in het Tropeninstituut (KIT) in Amsterdam." img= @/assets/extraHeader.jpg />
 
     <TextblockRight titleText= "Over GlobalGoalscommunity" text="Stichting SDG Nederland faciliteert een groeiende beweging van ruim 800 partijen die allemaal bijdragen aan het behalen van de Duurzame Ontwikkelingsdoelen (SDG’s). Het gaat om bedrijven, maatschappelijke organisaties, jongerengroepen, gemeenten, financiële instellingen, onderwijs- en kennisinstellingen en bewonersinitiatieven. We informeren, activeren en verbinden al die betrokken partijen met als doel de duurzame transitie te versnellen. Dat doen we zowel online als offline.
 
