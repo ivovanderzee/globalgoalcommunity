@@ -2,23 +2,15 @@
         <div class="Wrapper">
             <div class="Wrapper-centre">
                 <div id="SolutionBlock">
-<!--                    vanaf hier moet ik foreach loopen-->
                     <div class="SolutionBlock-block">
                         <div class="SolutionBlock-block-image"></div>
-<!--                        <div class="SolutionBlock-block-text">-->
-<!--                            <p class="bold">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>-->
-<!--                            <div class="SolutionBlock-block-text-heart">-->
-<!--                                <p>Joanne Ye | 23-06-2020</p>-->
-<!--                                <i class="far fa-heart"></i>-->
-<!--                            </div>-->
-
-<!--                    Dit is een test print uit de database -->
-<!--                            <li  v-for="post in posts" v-bind:key="post">-->
-<!--                                {{ post.name }}-->
-<!--                            </li>-->
-
-                             {{ posts }}
-<!--                        </div>-->
+                        <div class="SolutionBlock-block-text">
+                            <p class="bold">{{ post.position }} </p>
+                            <div class="SolutionBlock-block-text-heart">
+                                <p> {{ post.name }}</p>
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,10 +33,7 @@
 
     const db = firebase.firestore();
 
-    new Vue ({
-        // export default {
-        // name: 'SolutionBlock',
-        el: "#SolutionBlock",
+    export default {
         data(){
             return{
                 post: {
@@ -55,20 +44,20 @@
             }
         },
         created() {
-            db.collection("posts").get().then(function (querySnapshot) {
+            db.collection("posts").get().then(querySnapshot => {
+                let post;
                 querySnapshot.forEach(function (doc) {
                     console.log(doc.id, " => ", doc.data());
-                    let post = doc.data();
-
-                    console.log(post);
-                    this.post.post_id = post.post_id;
-                    this.post.name = post.name;
-                    this.post.position = post.position;
-                    // this.posts.push(post);
+                   post = doc.data();
+                    // console.log(post);
                 })
+
+                this.post.post_id = post.post_id;
+                this.post.name = post.name;
+                this.post.position = post.position;
             })
         }
-    })
+    }
 </script>
 
 <style scoped>
