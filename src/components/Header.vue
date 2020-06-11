@@ -22,7 +22,7 @@ export default {
 <style>
     .header{
         width: 100vw;
-        padding-top: 20vh;
+        padding-top: 22vh;
         padding-bottom: 10vh;
         background-color: #388E3C;
         display: flex;
