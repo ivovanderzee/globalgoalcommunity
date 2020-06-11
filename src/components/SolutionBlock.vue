@@ -1,24 +1,24 @@
 <template>
         <div class="Wrapper">
             <div class="Wrapper-centre">
-                <div class="SolutionBlock">
+                <div id="SolutionBlock">
 <!--                    vanaf hier moet ik foreach loopen-->
                     <div class="SolutionBlock-block">
                         <div class="SolutionBlock-block-image"></div>
-                        <div class="SolutionBlock-block-text">
-                            <p class="bold">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                            <div class="SolutionBlock-block-text-heart">
-                                <p>Joanne Ye | 23-06-2020</p>
-                                <i class="far fa-heart"></i>
-                            </div>
+<!--                        <div class="SolutionBlock-block-text">-->
+<!--                            <p class="bold">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>-->
+<!--                            <div class="SolutionBlock-block-text-heart">-->
+<!--                                <p>Joanne Ye | 23-06-2020</p>-->
+<!--                                <i class="far fa-heart"></i>-->
+<!--                            </div>-->
 
 <!--                    Dit is een test print uit de database -->
 <!--                            <li  v-for="post in posts" v-bind:key="post">-->
 <!--                                {{ post.name }}-->
 <!--                            </li>-->
 
-                             {{ post }}
-                        </div>
+                             {{ posts }}
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -26,8 +26,8 @@
 </template>
 
 <script>
-    // import db from "../main"
-    import Vue from 'vue'
+    // import Vue from 'vue'
+    import Vue from 'vue/dist/vue.js';
     import { firestorePlugin } from 'vuefire'
     import firebase from 'firebase/app'
     import 'firebase/firestore'
@@ -41,16 +41,12 @@
 
     const db = firebase.firestore();
 
-    export default {
-        name: 'SolutionBlock',
-        // props: {
-        //     post_id: null,
-        //     name: null,
-        //     position: null
-        // },
+    new Vue ({
+        // export default {
+        // name: 'SolutionBlock',
+        el: "#SolutionBlock",
         data(){
             return{
-                posts: [],
                 post: {
                     post_id: null,
                     name: null,
@@ -64,12 +60,15 @@
                     console.log(doc.id, " => ", doc.data());
                     let post = doc.data();
 
-                    // console.log(post);
-                    this.posts.push(post);
+                    console.log(post);
+                    this.post.post_id = post.post_id;
+                    this.post.name = post.name;
+                    this.post.position = post.position;
+                    // this.posts.push(post);
                 })
             })
         }
-    }
+    })
 </script>
 
 <style scoped>
