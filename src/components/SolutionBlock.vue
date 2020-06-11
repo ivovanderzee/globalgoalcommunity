@@ -1,7 +1,7 @@
 <template>
         <div class="Wrapper">
             <div class="Wrapper-centre">
-                <div id="SolutionBlock">
+                <div class="SolutionBlock">
                     <div class="SolutionBlock-block">
                         <div class="SolutionBlock-block-image"></div>
                         <div class="SolutionBlock-block-text">
@@ -66,7 +66,6 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 5vw;
         margin-bottom: 5vw;
     }
     .SolutionBlock-block{

@@ -37,7 +37,7 @@
 <style scoped>
     .HomeHeader{
         width: 100vw;
-        height: 85vh;
+        height: 78vh;
         display: flex;
         justify-content: center;
         align-items: center;

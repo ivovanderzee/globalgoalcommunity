@@ -68,7 +68,7 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        min-height: 80vh;
+        min-height: 75vh;
         padding: 20px;
         background-color: #ebebeb;
     }

@@ -10,6 +10,10 @@
             <router-link to="/login">Login</router-link>
         </div>
 
+        <div class="test">
+            x
+        </div>
+
         <router-view @authenticated="setAuthenticated" />
 
         <div id="footer">
@@ -72,6 +76,12 @@
 </script>
 
 <style>
+
+    .test{
+        background-color: red;
+        width: 100vw;
+        padding: 25px 0;
+    }
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -184,7 +194,7 @@
 
     .Wrapper-gray{
         width: 100vw;
-        background-color: #dfdfdf;
+        background-color: #EBEBEB;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -208,7 +218,7 @@
 
     .Wrapper-centre-gray{
         width: 70vw;
-        background-color: #dfdfdf;
+        background-color: #EBEBEB;
         display: flex;
         justify-content: center;
         flex-direction: column;
