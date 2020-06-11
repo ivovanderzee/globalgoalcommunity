@@ -11,7 +11,7 @@
 
 
     export default {
-        name: 'Login',
+        name: 'Solution',
         components: {
             Header,
             AddPost

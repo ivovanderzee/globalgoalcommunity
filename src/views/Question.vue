@@ -14,7 +14,7 @@
     import AddPost from "../components/AddPost";
 
     export default {
-        name: 'Login',
+        name: 'Question',
         components: {
             AddPost,
             Header,
