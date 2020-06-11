@@ -89,6 +89,10 @@
         text-decoration: none;
     }
 
+    p{
+        line-height: 26px;
+    }
+
     #nav {
         padding: 10px 0;
         position: fixed;

@@ -1,60 +1,57 @@
 <template>
-    <div id="Textblock">
-        <div id="Text-context">
-
-            <div class="Text-colom">
-                <H2 class="bold">{{ titleText }}</H2>
-                <br>
-                <p>{{ Text }}</p>
+    <div class="Wrapper">
+        <div class="Wrapper-centre">
+            <div id="Textblock">
+                <div class="Image-colom">
+                    <img :src="require('@/assets/' + imageName + '')" />
+                </div>
+                <div class="Text-colom">
+                    <H2 class="bold">{{ titleText }}</H2>
+                    <br>
+                    <p>{{ Text }}</p>
                 </div>
             </div>
-        <div class="Text-colom">
-            <img class="left.pic" src="img" />
-    </div>
-
-
-
+        </div>
     </div>
 </template>
 
 <script>
     export default {
         name: 'Textblock',
-        props: ['titleText', 'Text', 'img']
+        props:[
+            'titleText',
+            'Text',
+            'imageName'
+        ]
     }
 </script>
 
-
-
 <style>
     #Textblock{
-        width: 100vw;
-        padding-top: 30px;
-        background-color: white;
+        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-    }
-
-
-    #Text-context{
-        width: 70vw;
-        margin: 7vh;
-        display: flex;
-        justify-content: space-evenly;
-        list-style-type: none;
+        flex-direction: row;
     }
 
     .Text-colom{
+        margin: 40px 0;
         text-align: left;
-        width: 37vw;
-        padding-bottom: 30px;
+        width: 50%;
     }
 
-    .left.left.pic img{
-        height: 60px;
+    .Image-colom {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-
+    .Image-colom img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
 </style>
