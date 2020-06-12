@@ -200,6 +200,14 @@
         align-items: center;
     }
 
+    .Wrapper-green{
+        width: 100vw;
+        background-color: #388E3C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .Wrapper-lgreen{
         width: 100vw;
         background-color: #C8E6C9;
@@ -227,6 +235,13 @@
     .Wrapper-centre-lgreen{
         width: 70vw;
         background-color: #C8E6C9;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Wrapper-centre-green{
+        width: 70vw;
+        background-color: #388E3C;
         display: flex;
         justify-content: center;
         flex-direction: column;

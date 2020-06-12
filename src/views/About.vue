@@ -3,13 +3,33 @@
     <Header Text="Over ons" />
     <TextblockLeft
             titleText= "Over GlobalGoalscommunity"
-            text="Stichting SDG Nederland faciliteert een groeiende beweging van ruim 800 partijen die allemaal bijdragen aan het behalen van de Duurzame Ontwikkelingsdoelen (SDG’s). Het gaat om bedrijven, maatschappelijke organisaties, jongerengroepen, gemeenten, financiële instellingen, onderwijs- en kennisinstellingen en bewonersinitiatieven. We informeren, activeren en verbinden al die betrokken partijen met als doel de duurzame transitie te versnellen. Dat doen we zowel online als offline. Op deze website vinden leden van het netwerk elkaar binnen de community. SDG Nederland organiseert ook evenementen zoals de SDG Action Day, creëert allianties rond de SDG’s en brengt coalities op de been rond communicatie, financiering en impactberekening van de ontwikkelingsdoelen. Naast het faciliteren van dit professionele netwerk, betrekken we ook een breder publiek bij de doelen. Dat doen we onder meer met de SDG Stedentrip. Met de rubriek Doe Mee! bieden we handvatten om zelf actie te ondernemen.Het bureau van de stichting SDG Nederland bestaat uit zes werknemers met kantoor in het Tropeninstituut (KIT) in Amsterdam."
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor dignissim convallis aenean. Diam quam nulla porttitor massa id neque aliquam. At elementum eu facilisis sed odio morbi quis commodo odio. Mi quis hendrerit dolor magna eget est. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Gravida arcu ac tortor dignissim convallis aenean et tortor. Congue mauris rhoncus aenean vel. Suspendisse potenti nullam ac tortor vitae. Faucibus turpis in eu mi. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu non diam phasellus vestibulum. Nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas maecenas pharetra convallis posuere morbi leo. Commodo nulla facilisi nullam vehicula ipsum. Nulla aliquet porttitor lacus luctus. Egestas maecenas pharetra convallis posuere morbi leo urna. Neque gravida in fermentum et. Nulla porttitor massa id neque aliquam vestibulum morbi. Volutpat diam ut venenatis tellus. Ipsum suspendisse ultrices gravida dictum."
             imageName=homeHeader.jpg
     />
 
     <TextblockRight
-            titleText= "Over GlobalGoalscommunity"
-            text="Stichting SDG Nederland faciliteert een groeiende beweging van ruim 800 partijen die allemaal bijdragen aan het behalen van de Duurzame Ontwikkelingsdoelen (SDG’s). Het gaat om bedrijven, maatschappelijke organisaties, jongerengroepen, gemeenten, financiële instellingen, onderwijs- en kennisinstellingen en bewonersinitiatieven. We informeren, activeren en verbinden al die betrokken partijen met als doel de duurzame transitie te versnellen. Dat doen we zowel online als offline. Op deze website vinden leden van het netwerk elkaar binnen de community. SDG Nederland organiseert ook evenementen zoals de SDG Action Day, creëert allianties rond de SDG’s en brengt coalities op de been rond communicatie, financiering en impactberekening van de ontwikkelingsdoelen. Naast het faciliteren van dit professionele netwerk, betrekken we ook een breder publiek bij de doelen. Dat doen we onder meer met de SDG Stedentrip. Met de rubriek Doe Mee! bieden we handvatten om zelf actie te ondernemen. Het bureau van de stichting SDG Nederland bestaat uit zes werknemers met kantoor in het Tropeninstituut (KIT) in Amsterdam."
+            titleText= "Onze missie en visie"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor dignissim convallis aenean. Diam quam nulla porttitor massa id neque aliquam. At elementum eu facilisis sed odio morbi quis commodo odio. Mi quis hendrerit dolor magna eget est. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Gravida arcu ac tortor dignissim convallis aenean et tortor. Congue mauris rhoncus aenean vel. Suspendisse potenti nullam ac tortor vitae. Faucibus turpis in eu mi. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu non diam phasellus vestibulum. Nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas maecenas pharetra convallis posuere morbi leo. Commodo nulla facilisi nullam vehicula ipsum. Nulla aliquet porttitor lacus luctus. Egestas maecenas pharetra convallis posuere morbi leo urna. Neque gravida in fermentum et. Nulla porttitor massa id neque aliquam vestibulum morbi. Volutpat diam ut venenatis tellus. Ipsum suspendisse ultrices gravida dictum."
+            imageName=homeHeader.jpg
+    />
+
+    <BannerBetween btnText="Naar de vragemuur"/>
+
+    <TextblockLeft
+            titleText= "Het bestuur"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor dignissim convallis aenean. Diam quam nulla porttitor massa id neque aliquam. At elementum eu facilisis sed odio morbi quis commodo odio. Mi quis hendrerit dolor magna eget est. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Gravida arcu ac tortor dignissim convallis aenean et tortor. Congue mauris rhoncus aenean vel. Suspendisse potenti nullam ac tortor vitae. Faucibus turpis in eu mi. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu non diam phasellus vestibulum. Nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas maecenas pharetra convallis posuere morbi leo. Commodo nulla facilisi nullam vehicula ipsum. Nulla aliquet porttitor lacus luctus. Egestas maecenas pharetra convallis posuere morbi leo urna. Neque gravida in fermentum et. Nulla porttitor massa id neque aliquam vestibulum morbi. Volutpat diam ut venenatis tellus. Ipsum suspendisse ultrices gravida dictum."
+            imageName=homeHeader.jpg
+    />
+
+
+    <TextblockRight
+            titleText= "Wie financiert de GGC?"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor dignissim convallis aenean. Diam quam nulla porttitor massa id neque aliquam. At elementum eu facilisis sed odio morbi quis commodo odio. Mi quis hendrerit dolor magna eget est. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Gravida arcu ac tortor dignissim convallis aenean et tortor. Congue mauris rhoncus aenean vel. Suspendisse potenti nullam ac tortor vitae. Faucibus turpis in eu mi. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu non diam phasellus vestibulum. Nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas maecenas pharetra convallis posuere morbi leo. Commodo nulla facilisi nullam vehicula ipsum. Nulla aliquet porttitor lacus luctus. Egestas maecenas pharetra convallis posuere morbi leo urna. "
+            imageName=homeHeader.jpg
+    />
+    <TextblockLeft
+            titleText= "Praktische informatie"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac tortor dignissim convallis aenean. Diam quam nulla porttitor massa id neque aliquam. At elementum eu facilisis sed odio morbi quis commodo odio. Mi quis hendrerit dolor magna eget est. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Gravida arcu ac tortor dignissim convallis aenean et tortor. Congue mauris rhoncus aenean vel. Suspendisse potenti nullam ac tortor vitae. Faucibus turpis in eu mi. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Eu non diam phasellus vestibulum. Nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas maecenas pharetra convallis posuere morbi leo. Commodo nulla facilisi nullam vehicula ipsum. Nulla aliquet porttitor lacus luctus. Egestas maecenas pharetra convallis posuere morbi leo urna. Neque gravida in fermentum et. Nulla porttitor massa id neque aliquam vestibulum morbi."
             imageName=homeHeader.jpg
     />
   </div>
@@ -19,7 +39,8 @@
 <script>
   import Header from '@/components/Header.vue'
   import TextblockLeft from "@/components/TextblockLeft"
-  import TextblockRight from "@/components/TextblockRight";
+  import TextblockRight from "@/components/TextblockRight"
+  import BannerBetween from '@/components/BannerBetween.vue';
 
 
   export default {
@@ -27,6 +48,7 @@
     components: {
       Header,
       TextblockLeft,
-      TextblockRight
+      TextblockRight,
+      BannerBetween,
     }}
 </script>
