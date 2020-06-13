@@ -3,8 +3,10 @@
             <div class="Wrapper-centre">
                 <div class="SolutionBlock">
 
-                    <div class="SolutionBlock-block" v-for="post in posts">
-                        <div class="SolutionBlock-block-image"></div>
+                    <div class="SolutionBlock-block" v-for="post in posts" v-bind:key="post.post_id">
+<!--                        <div class="SolutionBlock-block-image" id="example" :style="`background-image: url('')`">-->
+                            <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}">
+                        </div>
                         <div class="SolutionBlock-block-text">
                             <p class="bold">{{ post.title }} </p>
                             <div class="SolutionBlock-block-text-heart">
@@ -35,6 +37,7 @@
     const db = firebase.firestore();
 
     export default {
+        el: '#example',
         data(){
             return{
                 posts: [],
@@ -42,14 +45,15 @@
                     post_id: null,
                     author: null,
                     title: null,
-                    date: null
+                    date: null,
+                    image: null,
                 }
             }
         },
         created() {
             db.collection("posts").get().then(querySnapshot => {
                 querySnapshot.forEach( (doc) => {
-                    console.log(doc.id, " => ", doc.data());
+                    // console.log(doc.id, " => ", doc.data());
                    this.posts.push(doc.data());
                 })
             })
@@ -66,7 +70,7 @@
         margin-bottom: 5vw;
     }
     .SolutionBlock-block{
-        width: 260px;
+        width: 290px;
         height: 30vh;
         box-shadow: 0 2px 10px #efefef;
         margin: 20px 0;
@@ -97,8 +101,9 @@
     }
 
     .SolutionBlock-block-image{
-        width: 260px;
+        width: 290px;
         height: 17vh;
         background-color: #dfdfdf;
+        background-size: cover;
     }
 </style>
