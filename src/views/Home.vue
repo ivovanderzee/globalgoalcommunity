@@ -16,6 +16,7 @@ import SolutionBlock from '@/components/SolutionBlock.vue'
 import SearchInitatief from '@/components/SearchInitatief.vue'
 import BannerAddInitatief from '@/components/BannerAddInitatief.vue'
 import AddPost from "../components/AddPost";
+import db from "../main.js"
 
 
 export default {
@@ -28,5 +29,11 @@ export default {
     SearchInitatief,
     BannerAddInitatief,
   },
+  data (){
+    return{
+      Posts: []
+    }
+  },
+
 }
 </script>
