@@ -19,9 +19,14 @@
 
 <style scoped>
     #secure {
+        height: 65vh;
         background-color: #FFFFFF;
         border: 1px solid #CCCCCC;
         padding: 20px;
         margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 </style>
