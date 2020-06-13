@@ -5,7 +5,6 @@
             <router-link to="/">Home</router-link> |
             <router-link to="/about">Over ons</router-link> |
             <router-link to="/event">Events</router-link> |
-            <router-link to="/solution">Oplossingen</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
             <router-link to="/login">Login</router-link>
         </div>
@@ -209,7 +208,7 @@
     }
 
     .Wrapper-centre{
-        width: 70vw;
+        width: 80vw;
         background-color: white;
         display: flex;
         justify-content: center;
@@ -217,7 +216,7 @@
     }
 
     .Wrapper-centre-gray{
-        width: 70vw;
+        width: 80vw;
         background-color: #EBEBEB;
         display: flex;
         justify-content: center;
@@ -225,7 +224,7 @@
     }
 
     .Wrapper-centre-lgreen{
-        width: 70vw;
+        width: 80vw;
         background-color: #C8E6C9;
         display: flex;
         justify-content: center;

@@ -3,9 +3,10 @@
             <div class="Wrapper-centre">
                 <div class="SolutionBlock">
 
-                    <div class="SolutionBlock-block" v-for="post in posts" v-bind:key="post.post_id">
-<!--                        <div class="SolutionBlock-block-image" id="example" :style="`background-image: url('')`">-->
-                            <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}">
+                   <div class="SolutionBlock-block" v-for="post in posts" v-bind:key="post.post_id">
+                       <router-link to="/post">
+
+                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}">
                         </div>
                         <div class="SolutionBlock-block-text">
                             <p class="bold">{{ post.title }} </p>
@@ -14,6 +15,7 @@
                                 <i class="far fa-heart"></i>
                             </div>
                         </div>
+                       </router-link>
                     </div>
 
                 </div>
@@ -22,22 +24,10 @@
 </template>
 
 <script>
-    import Vue from 'vue'
-    import { firestorePlugin } from 'vuefire'
-    import firebase from 'firebase/app'
-    import 'firebase/firestore'
 
-    Vue.use(firestorePlugin);
-
-    firebase.initializeApp({
-        databaseURL: "https://globalgoalscommunity.firebaseio.com",
-        projectId: "globalgoalscommunity",
-    });
-
-    const db = firebase.firestore();
+   import { db } from '../main'
 
     export default {
-        el: '#example',
         data(){
             return{
                 posts: [],
@@ -67,11 +57,12 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        margin-top: 5vw;
         margin-bottom: 5vw;
     }
     .SolutionBlock-block{
-        width: 290px;
-        height: 30vh;
+        width: 330px;
+        height: 33vh;
         box-shadow: 0 2px 10px #efefef;
         margin: 20px 0;
         display: flex;
@@ -101,8 +92,8 @@
     }
 
     .SolutionBlock-block-image{
-        width: 290px;
-        height: 17vh;
+        width: 330px;
+        height: 20vh;
         background-color: #dfdfdf;
         background-size: cover;
     }
