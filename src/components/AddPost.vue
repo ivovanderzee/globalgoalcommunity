@@ -38,6 +38,7 @@
         box-shadow: 0 0 10px #a7a7a7;
         position: fixed;
         bottom: 10vh;
+        z-index: 10;
     }
 
     .AddPost i{
