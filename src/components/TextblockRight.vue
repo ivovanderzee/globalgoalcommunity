@@ -18,7 +18,7 @@
 
 <script>
     export default {
-        name: 'Textblock',
+        name: 'TextblocR',
         props:[
             'titleText',
             'Text',
@@ -62,8 +62,8 @@
 
     .ImageR-colom img{
         display: flex;
-        width: 100%;
-        padding-right: 30%;
+        width: 95%;
+        padding-right: 20%;
         justify-content: center;
         align-items: center;
         height: auto;

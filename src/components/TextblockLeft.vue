@@ -7,7 +7,7 @@
                     <br>
                     <p>{{ Text }}</p>
                 </div>
-                <div class="Image-colom">
+                <div class="Image-colomn">
                     <img :src="require('@/assets/' + imageName + '')" />
                 </div>
             </div>
@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        name: 'Textblock',
+        name: 'TextblockL',
         props:[
             'titleText',
             'Text',
@@ -27,10 +27,19 @@
 </script>
 
 <style>
+    .Wrapper{
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     #Textblock{
         width: 100%;
         margin: 10vh;
         display: flex;
+        background-color: white;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
@@ -42,17 +51,16 @@
         width: 50%;
     }
 
-    .Image-colom {
+    .Image-colomn {
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .Image-colom img{
+    .Image-colomn img{
         display: flex;
-        width: 100%;
-        padding-left: 30%;
+        width: 80%;
         justify-content: center;
         align-items: center;
         height: auto;
