@@ -6,14 +6,13 @@
                    <div class="SolutionBlock-block" v-for="post in posts" v-bind:key="post.post_id">
                        <router-link v-bind:to="'/post/' + post.post_id">
 
-                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}">
-                        </div>
+                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}"></div>
                         <div class="SolutionBlock-block-text">
-                            <p class="bold">{{ post.title }} </p>
-                            <div class="SolutionBlock-block-text-heart">
-                                <p> {{ post.author }} | {{ post.date }}</p>
-                                <i class="far fa-heart"></i>
-                            </div>
+                        <p class="bold">{{ post.title }} </p>
+                        <div class="SolutionBlock-block-text-heart">
+                            <p> {{ post.author }} | {{ post.date }}</p>
+                            <i class="far fa-heart"></i>
+                        </div>
                         </div>
                        </router-link>
                     </div>
@@ -91,7 +90,7 @@
         align-items: center;
     }
 
-    .SolutionBlock-block-image{
+    .SolutionBlock-block-image {
         width: 330px;
         height: 20vh;
         background-color: #dfdfdf;
