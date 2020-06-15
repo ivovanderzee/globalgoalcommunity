@@ -2,13 +2,13 @@
     <div class="Wrapper">
         <div class="Wrapper-centre">
             <div id="Textblock">
-                <div class="Image-colom">
-                    <img :src="require('@/assets/' + imageName + '')" />
-                </div>
                 <div class="Text-colom">
                     <H2 class="bold">{{ titleText }}</H2>
                     <br>
                     <p>{{ Text }}</p>
+                </div>
+                <div class="Image-colom">
+                    <img :src="require('@/assets/' + imageName + '')" />
                 </div>
             </div>
         </div>
@@ -29,6 +29,7 @@
 <style>
     #Textblock{
         width: 100%;
+        margin: 10vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -50,8 +51,10 @@
 
     .Image-colom img{
         display: flex;
+        width: 100%;
+        padding-left: 30%;
         justify-content: center;
         align-items: center;
-        height: 300px;
+        height: auto;
     }
 </style>

@@ -15,6 +15,7 @@
     .GreenButton{
         height: 48px;
         width: auto;
+        margin: 0 10px;
         padding: 0 2vw;
         background-color: #388E3C;
         display: flex;
