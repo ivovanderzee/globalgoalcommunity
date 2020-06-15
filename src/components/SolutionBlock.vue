@@ -6,14 +6,13 @@
                    <div class="SolutionBlock-block" v-for="post in posts" v-bind:key="post.post_id">
                        <router-link v-bind:to="'/post/' + post.post_id">
 
-                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}">
-                        </div>
+                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}"></div>
                         <div class="SolutionBlock-block-text">
-                            <p class="bold">{{ post.title }} </p>
-                            <div class="SolutionBlock-block-text-heart">
-                                <p> {{ post.author }} | {{ post.date }}</p>
-                                <i class="far fa-heart"></i>
-                            </div>
+                        <p class="bold">{{ post.title }} </p>
+                        <div class="SolutionBlock-block-text-heart">
+                            <p> {{ post.author }} | {{ post.date }}</p>
+                            <i class="far fa-heart"></i>
+                        </div>
                         </div>
                        </router-link>
                     </div>
@@ -57,23 +56,19 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
     }
+
     .SolutionBlock-block{
         width: 330px;
         height: 33vh;
         box-shadow: 0 2px 10px #efefef;
         margin: 20px 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: white;
     }
 
     .SolutionBlock-block-text{
+        margin-left: 15px;
         display: flex;
-        width: 80%;
+        width: 90%;
         height: 13vh;
         justify-content: center;
         flex-direction: column;
@@ -91,7 +86,7 @@
         align-items: center;
     }
 
-    .SolutionBlock-block-image{
+    .SolutionBlock-block-image {
         width: 330px;
         height: 20vh;
         background-color: #dfdfdf;

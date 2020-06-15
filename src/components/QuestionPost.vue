@@ -1,45 +1,31 @@
 <template>
     <div class="Wrapper">
         <div class="Wrapper-centre">
-            <div class="QuestionPost">
-                <div class="QuestionPost-image">Image </div>
-                <div  class="QuestionPost-text">
-                    <h2>welkom op het global goals community </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-                    <div class="QuestionPost-text-info">
-                        <p><span class="bold">Tags:</span> <span class="Color-green">Hallo, Welcome</span></p>
-                        <p><span class="Color-gray">8 weken geleden | laatste reageersel 2 weken geleden </span> </p>
-                    </div>
 
+            <div class="QuestionPost"  v-for="question in questions" v-bind:key="question.question_id" >
+                <div class="QuestionPost-image" :style="{backgroundImage:`url(${question.image})`}"></div>
+                <div  class="QuestionPost-text">
+                    <h2>{{ question.title }} </h2>
+                    <p>{{ question.text }}</p>
+                    <div class="QuestionPost-text-info">
+                        <p><span class="bold">Tags:</span> <span class="Color-green">{{ question.tags }}</span></p>
+                        <p><span class="Color-gray">8 weken geleden | laatste reageersel {{ question.date }} </span> </p>
+                    </div>
                 </div>
+
                 <div class="QuestionPost-button">
                     <GreenButton btnText="Reageren"/>
                     <p><span class="bold">99</span> reageersels</p>
                 </div>
             </div>
 
-            <div class="QuestionPost">
-                <div class="QuestionPost-image">Image </div>
-                <div  class="QuestionPost-text">
-                    <h2>welkom op het global goals community </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-                    <div class="QuestionPost-text-info">
-                        <p><span class="bold">Tags:</span> <span class="Color-green">Hallo, Welcome</span></p>
-                        <p><span class="Color-gray">8 weken geleden | laatste reageersel 2 weken geleden </span> </p>
-                    </div>
-
-                </div>
-                <div class="QuestionPost-button">
-                    <GreenButton btnText="Reageren"/>
-                    <p><span class="bold">99</span> reageersels</p>
-                </div>
-            </div>
         </div>
     </div>
 </template>
 
 <script>
     import GreenButton from "./GreenButton";
+    import {db} from "../main";
 
     export default {
         name: 'QuestionPost',
@@ -48,6 +34,26 @@
         },
         components: {
             GreenButton
+        },
+        data(){
+            return{
+                questions: [],
+                question: {
+                    question_id: null,
+                    title: null,
+                    text: null,
+                    date: null,
+                    author: null,
+                    tags: null,
+                }
+            }
+        },
+        created() {
+            db.collection("questions").get().then(querySnapshot => {
+                querySnapshot.forEach( (doc) => {
+                    this.questions.push(doc.data());
+                })
+            })
         }
     }
 </script>
@@ -68,7 +74,7 @@
     }
 
     .QuestionPost-text{
-        width: 45vw;
+        width: 50vw;
     }
 
     .QuestionPost-text p{
@@ -84,7 +90,8 @@
     .QuestionPost-image{
         width: 200px;
         background-color: #dfdfdf;
-        height: 100%;
+        height: 110px;
+        background-size: cover ;
     }
 
     .QuestionPost-button{
