@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import LoginComponent from "../views/Login.vue"
-import SecureComponent from "../views/secure.vue"
+import firebase from "firebase";
+
+
+
 
 Vue.use(VueRouter)
 
@@ -36,22 +38,20 @@ const routes = [
     name: 'Login',
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
   },
-    {
-      path: '/',
-      redirect: {
-        name: "login"
-      }
-    },
-    {
-      path: "/login",
-      name: "login",
-      component: LoginComponent
-    },
-    {
-      path: "/secure",
-      name: "secure",
-      component: SecureComponent
-    },
+  {
+    path: '/signup',
+    name: 'SignUp',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue')
+},
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue'),
+    meta:{
+        requiresAuth:true
+         }
+    }
+
 ]
 
 const router = new VueRouter({
@@ -59,4 +59,14 @@ const router = new VueRouter({
   mode: 'history'
 })
 
-export default router
+
+router.beforeEach((to,from,next)=>{
+  const currentUser = firebase.auth().currentUser;
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if (requiresAuth && !currentUser) next('login');
+  else if (!requiresAuth && currentUser) next('dashboard')
+  else next();
+    });
+
+export default router;
