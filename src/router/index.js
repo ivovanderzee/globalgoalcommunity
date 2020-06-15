@@ -13,6 +13,10 @@ const routes = [
     component: Home
   },
   {
+    path: '/post/:postId',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Post.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
@@ -21,11 +25,6 @@ const routes = [
     path: '/event',
     name: 'Event',
     component: () => import(/* webpackChunkName: "about" */ '../views/Event.vue')
-  },
-  {
-    path: '/post',
-    name: 'Post',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Post.vue')
   },
   {
     path: '/question',
@@ -56,7 +55,8 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 export default router

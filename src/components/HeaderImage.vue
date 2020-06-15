@@ -1,11 +1,14 @@
 <template>
-    <div :style="cssProps" class="header"></div>
+<!--    <div :style="cssProps" class="header"></div>-->
+    <div>
+
+    </div>
 </template>
 <script>
     export default {
         name: 'header',
         props: [
-            'HeaderImage',
+            // 'HeaderImage',
 
         ],
         data() {

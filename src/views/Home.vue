@@ -3,7 +3,7 @@
     <HomeHeader msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
     <Categories msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
     <SolutionBlock msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
-    <SearchInitatief msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
+<!--    <SearchInitatief msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>-->
     <BannerAddInitatief btnText="Naar de vragemuur"/>
     <AddPost></AddPost>
   </div>
@@ -13,10 +13,9 @@
 import HomeHeader from '@/components/HomeHeader.vue'
 import Categories from '@/components/Categories.vue'
 import SolutionBlock from '@/components/SolutionBlock.vue'
-import SearchInitatief from '@/components/SearchInitatief.vue'
+// import SearchInitatief from '@/components/SearchInitatief.vue'
 import BannerAddInitatief from '@/components/BannerAddInitatief.vue'
 import AddPost from "../components/AddPost";
-import db from "../main.js"
 
 
 export default {
@@ -26,7 +25,7 @@ export default {
     HomeHeader,
     Categories,
     SolutionBlock,
-    SearchInitatief,
+    // SearchInitatief,
     BannerAddInitatief,
   },
   data (){

@@ -16,7 +16,7 @@
         </div>
     </div>
 </template>
-<script>;
+<script>
     import GreenButton from "./GreenButton";
 
     export default {
