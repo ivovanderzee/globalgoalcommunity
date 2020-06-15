@@ -2,6 +2,7 @@
     <div>
         <Header Text="Vragenmuur" />
         <question-post></question-post>
+        <ButtonMore></ButtonMore>
         <event-questionwall></event-questionwall>
         <AddPost></AddPost>
     </div>
@@ -12,6 +13,8 @@
     import QuestionPost from '@/components/QuestionPost.vue'
     import EventQuestionwall from '@/components/EventsQuestionwall.vue'
     import AddPost from "../components/AddPost";
+    import ButtonMore from "../components/ButtonMore";
+
 
     export default {
         name: 'Question',
@@ -19,6 +22,7 @@
             AddPost,
             Header,
             QuestionPost,
-            EventQuestionwall
+            EventQuestionwall,
+            ButtonMore,
         }}
 </script>

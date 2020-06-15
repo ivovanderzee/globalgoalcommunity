@@ -56,23 +56,19 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
     }
+
     .SolutionBlock-block{
         width: 330px;
         height: 33vh;
         box-shadow: 0 2px 10px #efefef;
         margin: 20px 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background-color: white;
     }
 
     .SolutionBlock-block-text{
+        margin-left: 15px;
         display: flex;
-        width: 80%;
+        width: 90%;
         height: 13vh;
         justify-content: center;
         flex-direction: column;

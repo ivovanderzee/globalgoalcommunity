@@ -25,7 +25,6 @@
             // HeaderImage,
             PostContent,
             PostOthers,
-            // PostReaction,
         },  data(){
             return{
                 posts: [],
