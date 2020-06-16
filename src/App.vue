@@ -61,18 +61,7 @@
 </template>
 
 <script>
-    export default {
-        name: 'App',
 
-        data() {
-            return {
-                authenticated: false,
-                mockAccount: {
-                    username: "ggc",
-                    password: "ad"
-                }
-            }
-        }}
 </script>
 
 <style>
