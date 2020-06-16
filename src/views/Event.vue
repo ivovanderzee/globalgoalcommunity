@@ -1,7 +1,8 @@
 <template>
     <div>
         <Header Text="Events" />
-        <AddPost></AddPost>
+        <Eventfilter></Eventfilter>
+        <AddEvent></AddEvent>
         <Questionobject></Questionobject>
         <BannerAddEvent></BannerAddEvent>
     
@@ -10,7 +11,8 @@
 
 <script>
     import Header from '@/components/Header.vue'
-    import AddPost from "../components/AddPost"
+    import Eventfilter from '@/components/Eventfilter.vue'
+    import AddEvent from "../components/AddEvent"
     import BannerAddEvent from '@/components/BannerAddEvent.vue'
     import Questionobject from '@/components/Questionobject.vue'
 
@@ -19,7 +21,8 @@
     export default {
         name: 'Login',
         components: {
-            AddPost,
+            Eventfilter,
+            AddEvent,
             BannerAddEvent,
             Header,
             Questionobject,
