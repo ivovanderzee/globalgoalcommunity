@@ -23,7 +23,6 @@
                 group: {
                     group_id: null,
                     name: null,
-                    categorie: null,
                     summary: null,
                     memberOne: null,
                     memberTwo: null,
