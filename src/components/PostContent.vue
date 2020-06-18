@@ -6,6 +6,7 @@
                 <div class="PostContent-info">
                     <p> <i class="fas fa-user-alt"></i> {{ Author }}</p>
                     <p> <i class="fas fa-calendar-minus"></i> {{ Datee }}</p>
+                    <p> <i class="fas fa-sticky-note"></i> Post #{{ $route.params.postId }}</p>
                 </div>
                 <div class="PostContent-content">
                     <p>{{ Content }}</p>

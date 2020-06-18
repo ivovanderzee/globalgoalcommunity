@@ -2,9 +2,6 @@
     <div>
         <div id="post" v-for="post in posts" v-bind:key="post.post_id">
             <HeaderImage></HeaderImage>
-
-            <p> Post nr: {{ $route.params.postId }}</p>
-
             <PostContent
                     :Title=post.title
                     :Author=post.author
