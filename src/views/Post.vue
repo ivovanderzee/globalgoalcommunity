@@ -1,9 +1,9 @@
 <template>
     <div>
         <div id="post" v-for="post in posts" v-bind:key="post.post_id">
-            <HeaderImage :Image=post.image></HeaderImage>
+            <HeaderImage></HeaderImage>
 
-            <h1> Dit is pagina nummer: {{ $route.params.postId }}</h1>
+            <p> Post nr: {{ $route.params.postId }}</p>
 
             <PostContent
                     :Title=post.title
@@ -11,6 +11,7 @@
                     :Datee=post.date
                     :Content=post.content
             ></PostContent>
+
             <PostOthers></PostOthers>
         </div>
     </div>
@@ -38,6 +39,7 @@
                     title: null,
                     date: null,
                     image: null,
+                    content: null,
                 },
             }
         }, created() {

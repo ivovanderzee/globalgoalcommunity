@@ -1,5 +1,8 @@
 <template>
-    <div :style="cssProps" class="headerImage"></div>
+<!--    <div :style="cssProps" class="headerImage"></div>-->
+    <div class="headerImage">
+        {{ Header }}
+    </div>
 </template>
 <script>
     export default {

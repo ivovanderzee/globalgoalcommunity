@@ -2,13 +2,13 @@
     <div class="Wrapper">
         <div class="Wrapper-centre">
             <div class="PostContent">
-                <h1>{{ Title }}</h1>
+                <h1 class="Color-green">{{ Title }}</h1>
                 <div class="PostContent-info">
                     <p> <i class="fas fa-user-alt"></i> {{ Author }}</p>
                     <p> <i class="fas fa-calendar-minus"></i> {{ Datee }}</p>
                 </div>
                 <div class="PostContent-content">
-                    {{ Content }}
+                    <p>{{ Content }}</p>
                 </div>
             </div>
         </div>
@@ -51,5 +51,6 @@
 
     .PostContent-content{
         margin-top: 3vw;
+        text-align: left;
     }
 </style>

@@ -11,7 +11,7 @@
 <!--            <router-link to="/SignUp">Meld aan</router-link> |-->
         </div>
 
-        <div class="test">
+        <div class="extraBalk">
             x
         </div>
 
@@ -65,7 +65,7 @@
 
 <style>
 
-    .test{
+    .extraBalk{
         background-color: red;
         width: 100vw;
         padding: 25px 0;
