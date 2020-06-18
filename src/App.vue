@@ -25,34 +25,32 @@
                 <div class="footer-colom">
                     <p class="bold">17 SDG's</p>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li><a href="#">Wat zijn SDG's</a></li>
+                        <li><a href="/">Bekijk oplossingen</a></li>
                     </ul>
                 </div>
                 <div class="footer-colom">
                     <p class="bold">Community</p>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
-                        <li>Milk</li>
+                        <li><a href="/">Oplossingen</a></li>
+                        <li><a href="/question">Vragenmuur</a></li>
+                        <li><a href="/event">Events</a></li>
+                        <li><a href="/ranking">Ranking</a></li>
                     </ul>
                 </div>
                 <div class="footer-colom">
                     <p class="bold">Over ons</p>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li><a href="#">Wat zijn SDG's</a></li>
+                        <li><a href="/about">Over ons</a></li>
+
                     </ul>
                 </div>
                 <div class="footer-colom">
                     <p class="bold">Contact</p>
                     <ul>
-                        <li>Coffee</li>
-                        <li>Tea</li>
-                        <li>Milk</li>
+                        <li><a href="/">Facebook</a></li>
+                        <li><a href="/">Twitter</a></li>
                     </ul>
                 </div>
             </div>
