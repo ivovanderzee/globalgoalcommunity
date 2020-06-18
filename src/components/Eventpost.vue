@@ -1,57 +1,49 @@
 <template>
-    <div class="Wrapper">
-        <div class="Wrapper-centre">
+        <div class="Wrapper">
+            <div class="Wrapper-centre">
+                <div class="SolutionBlock">
 
-            <div class="QuestionPost"  v-for="question in questions" v-bind:key="question.question_id" >
-                <div class="QuestionPost-image" :style="{backgroundImage:`url(${question.image})`}"></div>
-                <div  class="QuestionPost-text">
-                    <h2>{{ question.title }} </h2>
-                    <p>{{ question.text }}</p>
-                    <div class="QuestionPost-text-info">
-                        <p><span class="bold">Tags:</span> <span class="Color-green">{{ question.tags }}</span></p>
-                        <p><span class="Color-gray">8 weken geleden | laatste reageersel {{ question.date }} </span> </p>
+                   <div class="SolutionBlock-block" v-for="post in posts" v-bind:key="post.post_id">
+                       <router-link v-bind:to="'/post/' + post.post_id">
+
+                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${post.image})`}"></div>
+                        <div class="SolutionBlock-block-text">
+                        <p class="bold">{{ post.title }} </p>
+                        <div class="SolutionBlock-block-text-heart">
+                            <p> {{ post.author }} | {{ post.date }}</p>
+                            <i class="far fa-heart"></i>
+                        </div>
+                        </div>
+                       </router-link>
                     </div>
-                </div>
 
-                <div class="QuestionPost-button">
-                    <GreenButton btnText="Reageren"/>
-                    <p><span class="bold">99</span> reageersels</p>
                 </div>
             </div>
-
         </div>
-    </div>
 </template>
 
 <script>
-    import GreenButton from "./GreenButton";
-    import {db} from "../main";
+
+   import { db } from '../main'
 
     export default {
-        name: 'QuestionPost',
-        props: {
-            btnText: String
-        },
-        components: {
-            GreenButton
-        },
         data(){
             return{
-                questions: [],
-                question: {
-                    question_id: null,
-                    title: null,
-                    text: null,
-                    date: null,
+                posts: [],
+                post: {
+                    post_id: null,
                     author: null,
-                    tags: null,
+                    title: null,
+                    date: null,
+                    image: null,
                 }
             }
         },
         created() {
-            db.collection("questions").get().then(querySnapshot => {
+            db.collection("posts").get().then(querySnapshot => {
                 querySnapshot.forEach( (doc) => {
-                    this.questions.push(doc.data());
+                    // console.log(doc.id, " => ", doc.data());
+                   this.posts.push(doc.data());
                 })
             })
         }
@@ -59,49 +51,45 @@
 </script>
 
 <style scoped>
-    .QuestionPost{
-        height: 100px;
-        width: auto;
-        padding: 20px;
-        background-color: white;
+    .SolutionBlock{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .SolutionBlock-block{
+        width: 330px;
+        height: 33vh;
         box-shadow: 0 2px 10px #efefef;
+        margin: 20px 0;
+    }
+
+    .SolutionBlock-block-text{
+        margin-left: 15px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        border-radius: 10px;
-        margin-top: 2vw;
-    }
-
-    .QuestionPost-text{
-        width: 50vw;
-    }
-
-    .QuestionPost-text p{
-        margin-top: 5px;
-    }
-
-    .QuestionPost-text-info{
-        width: 600px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .QuestionPost-image{
-        width: 200px;
-        background-color: #dfdfdf;
-        height: 110px;
-        background-size: cover ;
-    }
-
-    .QuestionPost-button{
-        display: flex;
+        width: 90%;
+        height: 13vh;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
     }
 
-    .QuestionPost-button p{
-       margin-top: 10px;
+    .SolutionBlock-block-text p{
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .SolutionBlock-block-text-heart{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .SolutionBlock-block-image {
+        width: 330px;
+        height: 20vh;
+        background-color: #dfdfdf;
+        background-size: cover;
     }
 </style>

@@ -4,7 +4,7 @@
         <question-post></question-post>
         <ButtonMore></ButtonMore>
         <event-questionwall></event-questionwall>
-        <AddQuestion></AddQuestion>
+        <AddFamily></AddFamily>
     </div>
 </template>
 
@@ -12,14 +12,14 @@
     import Header from '@/components/Header.vue'
     import QuestionPost from '@/components/QuestionPost.vue'
     import EventQuestionwall from '@/components/EventsQuestionwall.vue'
-    import AddQuestion from "../components/AddQuestion";
+    import AddFamily from "../components/AddFamily";
     import ButtonMore from "../components/ButtonMore";
 
 
     export default {
         name: 'Question',
         components: {
-            AddQuestion,
+            AddFamily,
             Header,
             QuestionPost,
             EventQuestionwall,

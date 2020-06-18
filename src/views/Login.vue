@@ -5,6 +5,9 @@
         <input  type="text" v-model="email" placeholder="Email"><br>
         <input  type="password" v-model="password" placeholder="Password"><br>
         <button @click="login">log in</button>
+        
+  <button href= "DasboardAdmin.vue" >Admin</button>
+
     </div>
     </div>
 

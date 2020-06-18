@@ -1,6 +1,6 @@
 <template>
     <div class="dashboard">
-        <Header Text="Welkom Ad!" />
+        <Header Text="Welkom!" />
         <Button @click="logout">Log uit</Button>
         <SolutionBlock msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
         <BannerAddInitatief btnText="Naar de vragemuur"/>

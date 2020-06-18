@@ -41,6 +41,8 @@
   import TextblockLeft from "@/components/TextblockLeft"
   import TextblockRight from "@/components/TextblockRight"
   import BannerBetween from '@/components/BannerBetween.vue';
+  
+ 
 
 
   export default {
@@ -50,5 +52,7 @@
       TextblockLeft,
       TextblockRight,
       BannerBetween,
+
+
     }}
 </script>

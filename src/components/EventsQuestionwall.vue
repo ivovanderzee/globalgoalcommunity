@@ -1,110 +1,96 @@
 <template>
-   <div class="Wrapper-gray">
-       <div class="Wrapper-centre-gray">
-           <div class="EventsQuestionwall">
-               <h1>Wat staat er op het programma</h1>
+        <div class="Wrapper">
+            <div class="Wrapper-centre">
+              <h1 class="Color-black">Recent geplaatste evenementen</h1>
+                <div class="SolutionBlock">
 
-               <div class="EventsQuestionwall-wrapper">
-                   <div class="EventsQuestionwall-items">
-                       <div class="EventsQuestionwall-item">
-                           <div class="EventsQuestionwall-item-image">hier image</div>
-                           <div class="EventsQuestionwall-item-text">
-                               <h3>Groene peper: webinars over duurzaamheid in het onderwijs</h3>
-                           </div>
-                       </div>
-                       <div class="EventsQuestionwall-item-date bold Color-white">09 <br> JUN</div>
-                   </div>
+                   <div class="SolutionBlock-block" v-for="footer in footers" v-bind:key="footer.event_id">
+                       <router-link v-bind:to="'/post/' +footer.footer_id">
 
-                   <div class="EventsQuestionwall-items">
-                       <div class="EventsQuestionwall-item">
-                           <div class="EventsQuestionwall-item-image">hier image</div>
-                           <div class="EventsQuestionwall-item-text">
-                               <h3>Groene peper: webinars over duurzaamheid in het onderwijs</h3>
-                           </div>
-                       </div>
-                       <div class="EventsQuestionwall-item-date bold Color-white">09 <br> JUN</div>
-                   </div>
+                        <div class="SolutionBlock-block-image"  :style="{backgroundImage:`url(${footer.image})`}"></div>
+                        <div class="SolutionBlock-block-text">
+                        <p class="bold">{{ footer.title }} </p>
+                        <div class="SolutionBlock-block-text-heart">
+                            <p> {{ footer.author }} | {{ footer.date }}</p>
+                            <i class="far fa-heart"></i>
+                        </div>
+                        </div>
+                       </router-link>
+                    </div>
 
-                   <div class="EventsQuestionwall-items">
-                       <div class="EventsQuestionwall-item">
-                           <div class="EventsQuestionwall-item-image">hier image</div>
-                           <div class="EventsQuestionwall-item-text">
-                               <h3>Groene peper: webinars over duurzaamheid in het onderwijs</h3>
-                           </div>
-                       </div>
-                       <div class="EventsQuestionwall-item-date bold Color-white">09 <br> JUN</div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+                </div>
+            </div>
+        </div>
 </template>
 
 <script>
 
+   import { db } from '../main'
+
     export default {
-        name: 'EventsQuestionwall',
+        data(){
+            return{
+                footers: [],
+                footer: {
+                    event_id: null,
+                    author: null,
+                    title: null,
+                    date: null,
+                    image: null,
+                }
+            }
+        },
+        created() {
+            db.collection("footers").get().then(querySnapshot => {
+                querySnapshot.forEach( (doc) => {
+                    // console.log(doc.id, " => ", doc.data());
+                   this.footers.push(doc.data());
+                })
+            })
+        }
     }
 </script>
 
 <style scoped>
-    .EventsQuestionwall{
+    .SolutionBlock{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .SolutionBlock-block{
+        width: 330px;
+        height: 33vh;
+        box-shadow: 0 2px 10px #efefef;
+        margin: 20px 0;
+    }
+
+    .SolutionBlock-block-text{
+        margin-left: 15px;
+        display: flex;
+        width: 90%;
+        height: 13vh;
+        justify-content: center;
         flex-direction: column;
     }
 
-    .EventsQuestionwall h1{
-        margin: 3vw 0;
+    .SolutionBlock-block-text p{
+        text-align: left;
+        margin-top: 10px;
     }
 
-    .EventsQuestionwall-wrapper {
-        width: 100%;
-        height: auto;
+    .SolutionBlock-block-text-heart{
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         flex-direction: row;
-        margin-bottom: 6vw;
-    }
-
-    .EventsQuestionwall-items{
-        display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
-    .EventsQuestionwall-item{
-        width: 300px;
-        height: 40vh;
-        background-color: white;
-        position: relative;
-    }
-
-    .EventsQuestionwall-item-image{
-        width: 100%;
-        height: 60%;
-        background-color: gray;
-    }
-
-    .EventsQuestionwall-item-text{
-        width: 100%;
-        height: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .EventsQuestionwall-item-date{
-        margin-top: 30px;
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background-color: #388E3C;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .SolutionBlock-block-image {
+        width: 330px;
+        height: 20vh;
+        background-color: #dfdfdf;
+        background-size: cover;
     }
 </style>
