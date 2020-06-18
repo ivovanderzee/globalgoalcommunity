@@ -7,8 +7,8 @@
             <router-link to="/event">Events</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
             <router-link to="/ranking">Ranking</router-link> |
-            <router-link to="/login">Login</router-link> |
-            <router-link to="/SignUp">Meld aan</router-link> |
+            <router-link to="/login">Login</router-link>
+<!--            <router-link to="/SignUp">Meld aan</router-link> |-->
         </div>
 
         <div class="test">

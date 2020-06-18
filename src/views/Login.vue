@@ -1,17 +1,18 @@
 <template>
     <div class="container" >
-    <div class="login">
-        <h1>Log in </h1>
-        <input  type="text" v-model="email" placeholder="Email"><br>
-        <input  type="password" v-model="password" placeholder="Password"><br>
-        <button @click="login">log in</button>
-        
-  <button href= "DasboardAdmin.vue" >Admin</button>
+        <div class="login">
+            <h1>Login </h1>
+            <input  type="text" v-model="email" placeholder="Email"><br>
+            <input  type="password" v-model="password" placeholder="Password"><br>
 
+            <router-link v-bind:to="'/signup/'">
+                <p>Nog geen account? <span class="Color-green">meld je hier aan</span></p>
+            </router-link>
+
+            <button @click="login">Login</button>
+<!--            <button href= "DasboardAdmin.vue" >Admin</button>-->
+        </div>
     </div>
-    </div>
-
-
 </template>
 <script>
     import firebase from 'firebase';
@@ -40,26 +41,31 @@
     }
 </script>
 <style scoped>
-
     .container {
-        background: none;
-        width: 400px;
-        margin: 10rem auto 0;
-        text-align: center;
-        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, .15);
-        position: relative;
+       background-color: #dfdfdf;
+        width: 100vw;
+        height: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .login{
-        z-index: 1;
-        position: relative;
-        margin-bottom:10vh;
+        width: 450px;
+        text-align: center;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, .15);
         background: white;
         padding: .75rem 1.5rem 1.5rem;
         box-sizing: border-box;
+        border-radius: 10px;
     }
+
+    .login h1{
+        margin-top: 30px;
+    }
+
     input{
-        margin: 20px 0;
+        margin: 10px 0;
         width: 100%;
         text-align: center;
         padding: 15px;
@@ -68,11 +74,12 @@
     Button{
         height: 48px;
         width: auto;
-        margin:3vh;
+        margin: 2vh 1vh ;
         padding: 0 2vw;
         background-color: #388E3C;
         color: white;
         border-radius: 7px;
+        border: none;
         cursor: pointer;
     }
 </style>
