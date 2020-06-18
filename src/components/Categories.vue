@@ -1,16 +1,27 @@
 <template>
     <div class="sdgCategoriesSlider">
+
+    <div class="buttonWrapper">
+
+        <div @click="prevSlide" id="buttonLeft">
+        <i  class="fas fa-chevron-left fa-lg"></i>
+        </div>
+
+        <div @click="nextSlide" id="buttonRight">
+        <i  class="fas fa-chevron-right fa-lg"></i>
+        </div>
       
+      </div>
     <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" >
      
-    <slide v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
+    <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
              <div class="HomeCategories-SDG-icon" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
          
     </slide>
   </carousel>
 
- <a @click="prevSlide">Prev</a>
-     <a @click="nextSlide">Next</a>
+  
+  
   </div>
 </template>
 
@@ -58,10 +69,58 @@
 <style scoped>
 
 
-
 .sdgCategoriesSlider{
-        padding-top: 30px;
+        margin-top: 30px;
         width: 100vw;
+        height: 100%;
+        vertical-align: center;
+        position: relative;
+}
+
+.fa-chevron-right{
+    display: table-cell;
+  vertical-align: middle;
+   
+
+}
+
+.fa-chevron-left{
+  background-size: 400%;
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+#buttonLeft{
+    display: table;
+    top: 50%;
+    bottom: 50%;
+    position: absolute;
+    left: 0;
+   background-image: linear-gradient(to right, rgba(255,255,255,1) ,rgb(255,255,255,0));
+    
+    height: 11vh;
+    z-index: 10;
+    color: #42925D;
+    margin: auto;
+    width: 5vw;
+    
+}
+
+
+#buttonRight{
+    display: table;
+    top: 50%;
+    bottom: 50%;
+    position: absolute;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0) ,rgb(255,255,255,1));
+     height: 11vh;
+    z-index: 10;
+    color: #42925D;
+    margin: auto;
+    width: 5vw;
+   
 }
   
 
