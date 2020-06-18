@@ -6,6 +6,7 @@
                         <p class="bold">Nieuwste Oplossingen</p>
                         <p>Uitgelicht door anderen</p>
                         <p>Aangeraden door ons</p>
+                        <p>Podcasts</p>
                 </div>
                 <div>
                     <GreenButton btn-text="Filter"> </GreenButton>

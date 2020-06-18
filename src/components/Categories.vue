@@ -97,8 +97,7 @@
     bottom: 50%;
     position: absolute;
     left: 0;
-   background-image: linear-gradient(to right, rgba(255,255,255,1) ,rgb(255,255,255,0));
-    
+    background-image: linear-gradient(to right, rgba(255,255,255,1) ,rgb(255,255,255,0));
     height: 11vh;
     z-index: 10;
     color: #42925D;
@@ -131,14 +130,14 @@
         justify-content: center;
         align-items: center;
      
-        opacity: 0.4;
+        opacity: 0.2;
         background-size: 100%;
         border-radius: 10%;
         background-position: center;
-        background-color: #8D8D8D;
+       
         background-size: 100%;
         background-repeat: no-repeat;
-        -webkit-filter: grayscale(1);
+     
     }
 
     .HomeCategories-SDG-icon:hover{
