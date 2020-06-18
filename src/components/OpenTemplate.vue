@@ -74,6 +74,7 @@
         align-items: center;
         flex-direction: column;
         border-radius: 10px;
+        z-index: 99998;
     }
 
     .template-filter{
@@ -140,7 +141,7 @@
         width: 100vw;
         height: 100vh;
         top: -1px;
-        z-index: 1;
+        z-index: 99997;
         background-color: black;
         opacity: 0.5;
         display: flex;
