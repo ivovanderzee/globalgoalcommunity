@@ -50,5 +50,6 @@
       TextblockLeft,
       TextblockRight,
       BannerBetween,
-    }}
+    }
+  }
 </script>

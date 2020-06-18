@@ -15,13 +15,14 @@
     </div>
 </template>
 <script>
+
     export default {
         name: 'header',
         props: [
             'Title',
             'Author',
             'Datee',
-            'Content'
+            'Content',
         ],
     }
 </script>
