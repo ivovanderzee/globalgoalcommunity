@@ -7,16 +7,16 @@
         <div class="footer-colom">
             <p class="bold">17 SDG's</p>
             <ul>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
+                <li><a href="#">Wat zijn SDG's</a></li>
+                <li><a href="/Solutions.vue">Bekijk oplossingen</a></li>
+                <li>Tooo</li>
             </ul>
         </div>
         <div class="footer-colom">
             <p class="bold">Community</p>
             <ul>
-                <li>Coffee</li>
-                <li>Tea</li>
+                <li>Taa</li>
+                <li>Melk</li>
                 <li>Milk</li>
                 <li>Milk</li>
             </ul>
