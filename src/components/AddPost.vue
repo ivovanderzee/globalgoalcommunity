@@ -1,17 +1,30 @@
 <template>
-    <div class="AddPost"   v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
-        <p class="bold"> {{message}}<i class="fas fa-plus"></i></p>
+    <div>
+        <div v-if="seen">
+            <OpenTemplate></OpenTemplate>
+        </div>
+
+        <div class="AddPost"  v-on:click="seen = !seen" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+            <p class="bold"> {{message}}<i class="fas fa-plus"></i></p>
+        </div>
     </div>
 </template>
 
 <script>
+    import OpenTemplate from "./OpenTemplate";
+
     export default {
         name: 'AddPost',
-        el: '#mouse',
+        el:
+            '#mouse',
+        components: {
+            OpenTemplate,
+        },
         data: function() {
             return {
-                message: ''
-            };
+                message: '',
+                seen: false,
+            }
         },
         methods: {
             mouseover: function(){
@@ -19,10 +32,12 @@
             },
             mouseleave: function(){
                 this.message = ''
+            },
+            open: function () {
+                alert("hallo")
             }
         }
     }
-
 </script>
 
 <style scoped>
@@ -38,7 +53,7 @@
         box-shadow: 0 0 10px #a7a7a7;
         position: fixed;
         bottom: 10vh;
-        z-index: 10;
+        z-index: 99998;
     }
 
     .AddPost i{
