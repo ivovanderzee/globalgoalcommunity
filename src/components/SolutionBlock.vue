@@ -178,4 +178,9 @@ components: {
         background-color: #dfdfdf;
         background-size: cover;
     }
+@media (max-width: 760px) {
+    .filter {
+        display: none;
+    }
+}
 </style>

@@ -29,7 +29,8 @@
 
 <style>
     .WrapperR{
-        width: 100vw;
+        width: 100%;
+        height: auto;
         background-color: #388E3C;
         display: flex;
         justify-content: center;
@@ -67,5 +68,14 @@
         justify-content: center;
         align-items: center;
         height: auto;
+    }
+
+    @media (max-width: 760px) {
+        .ImageR-colom  {
+            display: none;
+        }
+        WrapperR{
+
+        }
     }
 </style>

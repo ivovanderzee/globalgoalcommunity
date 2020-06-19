@@ -39,4 +39,10 @@
         align-items: center;
         margin: 25px 0;
     }
+
+    @media (max-width: 760px) {
+        .HomeBannerInitatief {
+            display: none;
+        }
+    }
 </style>

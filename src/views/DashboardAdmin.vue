@@ -10,7 +10,6 @@
 <script>
     import firebase from 'firebase';
     import Header from '@/components/Header.vue'
-    import BannerAddInitatief from '@/components/BannerAddInitatief.vue'
     import SolutionBlock from '@/components/SolutionBlock.vue'
 
     export default {
@@ -18,7 +17,7 @@
         components:{
             Header,
             SolutionBlock,
-           
+
 
     },
         methods:{

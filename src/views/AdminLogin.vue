@@ -78,4 +78,14 @@
         border: none;
         cursor: pointer;
     }
+
+    @media (max-width: 760px) {
+        .container {
+            margin: 1%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 </style>
