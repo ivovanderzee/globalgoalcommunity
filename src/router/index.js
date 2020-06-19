@@ -55,8 +55,19 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue'),
     meta:{
         requiresAuth:true
-         }
-    }
+         }},
+  {
+    path: '/adminlogin',
+    name: 'AdminLogin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AdminLogin.vue')
+  },
+  {
+    path: '/DashboardAdmin',
+    name: 'Dashboardadmin',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DashboardAdmin.vue'),
+    meta:{
+      requiresAuth:true
+    }},
 
 ]
 
@@ -74,5 +85,16 @@ router.beforeEach((to,from,next)=>{
   else if (!requiresAuth && currentUser) next('dashboard')
   else next();
     });
+
+router.beforeEach((to,from,next)=>{
+  const currentUser = firebase.auth().currentUser;
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if (requiresAuth && !currentUser) next('adminlogin');
+  else if (!requiresAuth && currentUser) next('dashboardadmin')
+  else next();
+});
+
+
 
 export default router;

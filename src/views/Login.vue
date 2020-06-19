@@ -10,7 +10,7 @@
             </router-link>
 
             <button @click="login">Login</button>
-<!--            <button href= "DasboardAdmin.vue" >Admin</button>-->
+
         </div>
     </div>
 </template>

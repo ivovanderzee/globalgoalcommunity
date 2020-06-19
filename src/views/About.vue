@@ -19,19 +19,19 @@
     <TextblockLeft
             titleText= "Het bestuur"
             text="Het bestuur van de Global Goals Community bestaat uit John Doe (voorzitter), Johnny Deo (secretaris) en Jhon Ode (penningsmeester). Het is een non-profit organisatie: de bestuurders ontvangen dan ook geen enkele vergoeding voor hun werk. Het bestuur is bevoegd om de stichting te vertegenwoordigen.  De volledige statuten zijn op te vragen via ................              "
-            imageName=ecodorp.JPG
+            imageName=Huizen_ecodorp.jpg
     />
 
 
     <TextblockRight
             titleText= "Wie financiert de GGC?"
             text=" (instantie hier) en (instantie hier) financieren zowel Ecodorp Boekel als Global Goals Community. Ook de Europese Unie draagt financieel bij aan de activiteiten van de stichting. "
-            imageName=ad.jpg
-    />
+            imageName=Huizen_ecodorp.jpg
+                    />
     <TextblockLeft
             titleText= "Praktische informatie"
             text="Je kunt ook ons lijfelijke SDG huis bezoeken. (Adres) Voor meer informatie of vragen kun ons bereiken op (EMial@Email.email) of bellen met (061234567890)       Stichting Global goals community KvK: 000000 Btw: NL0000000000 IBAN NL000000000000 "
-            imageName=huizen_ecdorp.jpg
+            imageName=Huizen_ecodorp.jpg
     />
   </div>
 

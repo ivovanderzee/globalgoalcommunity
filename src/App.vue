@@ -43,6 +43,8 @@
                     <ul>
                         <li><a href="#">Wat zijn SDG's</a></li>
                         <li><a href="/about">Over ons</a></li>
+                        <li><a href="/adminlogin">Admin</a></li>
+
 
                     </ul>
                 </div>
