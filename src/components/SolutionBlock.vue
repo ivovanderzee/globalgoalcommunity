@@ -92,7 +92,7 @@ components: {
 
             setActive(index){
 
-                this.activeItem == index; 
+                this.activeItem = index; 
                 
 
             }
