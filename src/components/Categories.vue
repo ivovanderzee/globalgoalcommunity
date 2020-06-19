@@ -73,6 +73,7 @@
 <style scoped>
 
 
+
 .sdgCategoriesSlider{
         margin-top: 30px;
         width: 100vw;
@@ -98,8 +99,9 @@
 .buttonWrapper{
  
 position: absolute;
-z-index: 100;
 width: 100vw;
+z-index: 10;
+visibility: hidden;
 
 }
 
@@ -107,7 +109,7 @@ width: 100vw;
     display: table;
     top: 50%;
     bottom: 50%;
-
+visibility: visible;
     float: left;
     left: 0;
     background: rgb(255,255,255);
@@ -120,6 +122,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 1
     
 }
 #buttonRight{
+    visibility: visible;
     display: table;
     top: 50%;
     bottom: 50%;
@@ -147,7 +150,6 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 1
         background-size: 100%;
         border-radius: 10%;
         background-position: center;
-       
         background-size: 100%;
         background-repeat: no-repeat;
      
