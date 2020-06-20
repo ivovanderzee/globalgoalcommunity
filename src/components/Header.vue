@@ -1,6 +1,6 @@
 <template>
     <div :style="cssProps" class="header">
-        <p>{{ Text }}</p>
+        <h1>{{ Text }}</h1>
     </div>
 
 </template>
@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .header{
         width: 100vw;
         height: 300px;
@@ -33,9 +33,8 @@ export default {
     }
 
 
-    .header p{
-        color:white;
-        font-weight: bold;
-        font-size:7vh;
+    .header h1{
+        color: white;
+        font-size: 70px;
     }
 </style>

@@ -50,6 +50,7 @@
     .HomeHeader h1{
         width: 40vw;
         text-align: left;
+        font-size: 50px;
     }
 
     .HomeHeader-wrapper{

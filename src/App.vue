@@ -6,7 +6,7 @@
             <router-link to="/about">Over ons</router-link> |
             <router-link to="/event">Events</router-link> |
             <router-link to="/question">Vragenmuur</router-link> |
-            <router-link to="/ranking">Ranking</router-link> |
+<!--            <router-link to="/ranking">Ranking</router-link> |-->
             <router-link to="/login">Login</router-link>
 <!--            <router-link to="/SignUp">Meld aan</router-link> |-->
         </div>
@@ -65,10 +65,10 @@
 
 <style>
 
-    .extraBalk{
-        background-color: red;
-        width: 100vw;
-        padding: 25px 0;
+    *{
+        margin: 0;
+        padding: 0;
+
     }
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -78,9 +78,20 @@
         color: #2c3e50;
     }
 
-    *{
-        margin: 0;
-        padding: 0;
+    @font-face {
+        font-family: font1;
+        src: url("assets/Montserrat/Montserrat-Black.ttf");
+    }
+
+    @font-face {
+        font-family: font2;
+        src: url("assets/Open_Sans/OpenSans-Regular.ttf");
+
+    }
+
+    h1{
+        font-family: font1;
+        font-size: 40px;
 
     }
 
@@ -90,6 +101,7 @@
     }
 
     p{
+        font-family: font2;
         line-height: 26px;
     }
 
@@ -171,6 +183,12 @@
 
     .bold{
         font-weight: bolder;
+    }
+
+    .extraBalk{
+        background-color: red;
+        width: 100vw;
+        padding: 25px 0;
     }
 
     /*--------------*/

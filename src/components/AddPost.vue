@@ -5,7 +5,7 @@
         </div>
 
         <div class="AddPost"  v-on:click="seen = !seen" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
-            <p class="bold"> {{message}}<i class="fas fa-plus"></i></p>
+            <p class="bold"> Upload {{message}} <i class="fas fa-plus"></i></p>
         </div>
     </div>
 </template>
@@ -28,7 +28,7 @@
         },
         methods: {
             mouseover: function(){
-                this.message = 'Oplossing uploaden'
+                this.message = 'Oplossing'
             },
             mouseleave: function(){
                 this.message = ''
@@ -42,7 +42,9 @@
 
 <style scoped>
     .AddPost{
-        background-color: #B9630C;
+        background-color: #388E3C;
+        opacity: 0.5;
+        width: auto;
         width: auto;
         padding: 20px 30px ;
         color: white;
@@ -52,11 +54,15 @@
         border-radius: 0  40px 40px 0;
         box-shadow: 0 0 10px #a7a7a7;
         position: fixed;
-        bottom: 10vh;
+        bottom: 50px;
         z-index: 99998;
     }
 
     .AddPost i{
         margin-left: 20px;
+    }
+
+    .AddPost:hover{
+        opacity: 1;
     }
 </style>
