@@ -1,7 +1,8 @@
 <template>
     <div class="sdgCategoriesSlider">
 
-    <div class="buttonWrapper">
+
+<div class="buttonWrapper">
 
         <div @click="prevSlide" id="buttonLeft">
         <i  class="fas fa-chevron-left fa-lg"></i>
@@ -12,8 +13,11 @@
         </div>
       
       </div>
+   
     <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" >
      
+ 
+
     <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
              <div class="HomeCategories-SDG-icon" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
          
@@ -69,6 +73,7 @@
 <style scoped>
 
 
+
 .sdgCategoriesSlider{
         margin-top: 30px;
         width: 100vw;
@@ -91,37 +96,48 @@
 
 }
 
+.buttonWrapper{
+ 
+position: absolute;
+width: 100vw;
+z-index: 10;
+visibility: hidden;
+
+}
+
 #buttonLeft{
     display: table;
     top: 50%;
     bottom: 50%;
-    position: absolute;
+visibility: visible;
+    float: left;
     left: 0;
-    background-image: linear-gradient(to right, rgba(255,255,255,1) ,rgb(255,255,255,0));
-    height: 11vh;
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    height: 80px;
     z-index: 10;
     color: #42925D;
-    margin: auto;
+   margin: auto;
     width: 5vw;
     
 }
-
-
 #buttonRight{
+    visibility: visible;
     display: table;
     top: 50%;
     bottom: 50%;
-    position: absolute;
+    margin: auto;
+    float: right;
     right: 0;
-    background-image: linear-gradient(to right, rgba(255,255,255,0) ,rgb(255,255,255,1));
-     height: 11vh;
+    background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); 
+     height: 80px;
     z-index: 10;
     color: #42925D;
-    margin: auto;
+    
     width: 5vw;
    
 }
-  
 
     .HomeCategories-SDG-icon{
         width: 80px;
@@ -134,7 +150,6 @@
         background-size: 100%;
         border-radius: 10%;
         background-position: center;
-       
         background-size: 100%;
         background-repeat: no-repeat;
      

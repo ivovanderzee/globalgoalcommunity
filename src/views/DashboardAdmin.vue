@@ -1,30 +1,29 @@
 <template>
     <div class="dashboard">
-        <Header Text="Welkom!" />
+        <Header Text="Welkom Admin!" />
         <Button @click="logout">Log uit</Button>
         <SolutionBlock msg="Het kennisplatform voor het delen van duurzame SDG oplossingen"/>
-        <BannerAddInitatief btnText="Naar de vragemuur"/>
+
     </div>
 </template>
 
 <script>
     import firebase from 'firebase';
     import Header from '@/components/Header.vue'
-    import BannerAddInitatief from '@/components/BannerAddInitatief.vue'
     import SolutionBlock from '@/components/SolutionBlock.vue'
 
     export default {
-        name:'dashboard',
+        name:'dashboardadmin',
         components:{
             Header,
             SolutionBlock,
-            BannerAddInitatief,
+
 
     },
         methods:{
             logout: function(){
                 firebase.auth().signOut().then(()=>{
-                    this.$router.replace('login')
+                    this.$router.replace('adminlogin')
                 })
             }
         }

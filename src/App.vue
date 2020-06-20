@@ -43,6 +43,8 @@
                     <ul>
                         <li><a href="#">Wat zijn SDG's</a></li>
                         <li><a href="/about">Over ons</a></li>
+                        <li><a href="/adminlogin">Admin</a></li>
+
 
                     </ul>
                 </div>
@@ -143,10 +145,9 @@
 
 
     #footer-context{
-        width: 70vw;
         display: flex;
-        justify-content: space-evenly;
-        list-style-type: none;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #footer-context ul{
@@ -157,10 +158,25 @@
        margin-top: 10px;
     }
 
-    .footer-colom{
-       text-align: left;
-        width: 10vw;
-        padding-bottom: 30px;
+    .footer-colom {
+        flex-grow: 0.25;
+        padding-bottom: 27px;
+        padding-left: 77px;
+
+    }
+
+    @media (max-width: 770px) {
+        .footer-colom {
+            width: calc(74% - 29px);
+            padding-bottom: 27px;
+            padding-left: 0px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .footer-colom {
+            width: calc(100% - 2px)
+        }
     }
 
     .footer-colom img{

@@ -28,18 +28,23 @@
 
 <style>
     .Wrapper{
-        width: 100vw;
-        background-color: white;
+        width: 100%;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+    .Wrapper-centre {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;}
+
     #Textblock{
         width: 100%;
         margin: 10vh;
         display: flex;
-        background-color: white;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
@@ -64,5 +69,11 @@
         justify-content: center;
         align-items: center;
         height: auto;
+    }
+
+    @media (max-width: 760px) {
+        .Image-colomn  {
+           display: none;
+        }
     }
 </style>

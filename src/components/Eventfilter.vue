@@ -50,4 +50,9 @@
     .HomeFilter-item p{
         margin-right: 50px;
     }
+    @media (max-width: 760px) {
+        .HomeFilter {
+            display: none;
+        }
+    }
 </style>

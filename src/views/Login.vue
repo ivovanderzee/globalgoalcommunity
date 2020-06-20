@@ -10,7 +10,7 @@
             </router-link>
 
             <button @click="login">Login</button>
-<!--            <button href= "DasboardAdmin.vue" >Admin</button>-->
+
         </div>
     </div>
 </template>
@@ -82,4 +82,15 @@
         border: none;
         cursor: pointer;
     }
+    @media (max-width: 760px) {
+        .container {
+            margin: 1%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
 </style>
