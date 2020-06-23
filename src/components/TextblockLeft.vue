@@ -36,13 +36,13 @@
     }
 
     .Wrapper-centre {
-        width: 100%;
+        width: 80vw;
         display: flex;
         justify-content: center;
-        flex-direction: column;}
+        flex-direction: column;
+    }
 
     #Textblock{
-        width: 100%;
         margin: 10vh;
         display: flex;
         justify-content: space-between;
@@ -65,7 +65,7 @@
 
     .Image-colomn img{
         display: flex;
-        width: 80%;
+        width: 95%;
         justify-content: center;
         align-items: center;
         height: auto;

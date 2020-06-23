@@ -28,7 +28,23 @@
     }
 </script>
 
-<style>
+<style scoped>
+    .Wrapper{
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Wrapper-centre{
+        width: 70vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
    .PostContent{
        width: 100%;
        height: 70vh;
@@ -36,10 +52,12 @@
        align-items: flex-start;
        flex-direction: column;
        margin-top: 5vw;
+
    }
 
     .PostContent h1{
         font-size: 50px;
+        text-align: left;
     }
 
     .PostContent-info{

@@ -1,20 +1,20 @@
 <template>
     <div class="Wrapper">
         <div Class="Wrapper-centre">
-            <div class="QuestionPost"  v-for="question in questions" v-bind:key="question.question_id" >
-                <div class="QuestionPost-image" :style="{backgroundImage:`url(${question.image})`}"></div>
+            <div class="QuestionPost"  v-for="ranking in rankings" v-bind:key="ranking.ranking_id" >
+                <div class="QuestionPost-image" :style="{backgroundImage:`url(${ranking.image})`}"></div>
                 <div  class="QuestionPost-text">
-                    <h2>{{ question.title }} </h2>
-                    <p>{{ question.text }}</p>
+                    <h2>{{ ranking.points }} </h2>
+                    <p>{{ ranking.text }}</p>
                     <div class="QuestionPost-text-info">
-                        <p><span class="bold">Tags:</span> <span class="Color-green">{{ question.tags }}</span></p>
-                        <p><span class="Color-gray">8 weken geleden | laatste reageersel {{ question.date }} </span> </p>
+                        <p><span class="bold">Ranking:</span> <span class="Color-green">{{ ranking.tags }}</span></p>
+                        <p><span class="Color-gray">Family: {{ ranking.family }} </span> </p>
                     </div>
                 </div>
 
                 <div class="QuestionPost-button">
-                    <GreenButton btnText="Reageren"/>
-                    <p><span class="bold">99</span> reageersels</p>
+                    <GreenButton btnText="Naar Family"/>
+                    <p><span class="bold">Global</span> Ranking List</p>
                 </div>
             </div>
           </div>
@@ -36,21 +36,20 @@
         },
         data(){
             return{
-                questions: [],
-                question: {
-                    question_id: null,
-                    title: null,
+                rankings: [],
+                ranking: {
+                    ranking_id: null,
+                    points: null,
                     text: null,
-                    date: null,
-                    author: null,
+                    family: null,
                     tags: null,
                 }
             }
         },
         created() {
-            db.collection("questions").get().then(querySnapshot => {
+            db.collection("rankings").get().then(querySnapshot => {
                 querySnapshot.forEach( (doc) => {
-                    this.questions.push(doc.data());
+                    this.rankings.push(doc.data());
                 })
             })
         }
@@ -75,7 +74,7 @@
     }
 
     .QuestionPost{
-        height: 100px;
+        height: 130px;
         width: auto;
         padding: 20px;
         background-color: white;
@@ -103,7 +102,7 @@
     }
 
     .QuestionPost-image{
-        width: 200px;
+        width: 210px;
         background-color: #dfdfdf;
         height: 110px;
         background-size: cover ;

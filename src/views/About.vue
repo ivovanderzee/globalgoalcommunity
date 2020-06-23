@@ -14,8 +14,6 @@
             imageName=Kas.jpg
     />
 
-    <BannerBetween btnText="Naar de vragemuur"/>
-
     <TextblockLeft
             titleText= "Het bestuur"
             text="Het bestuur van de Global Goals Community bestaat uit John Doe (voorzitter), Johnny Deo (secretaris) en Jhon Ode (penningsmeester). Het is een non-profit organisatie: de bestuurders ontvangen dan ook geen enkele vergoeding voor hun werk. Het bestuur is bevoegd om de stichting te vertegenwoordigen.  De volledige statuten zijn op te vragen via ................              "
@@ -33,8 +31,9 @@
             text="Je kunt ook ons lijfelijke SDG huis bezoeken. (Adres) Voor meer informatie of vragen kun ons bereiken op (EMial@Email.email) of bellen met (061234567890)       Stichting Global goals community KvK: 000000 Btw: NL0000000000 IBAN NL000000000000 "
             imageName=Huizen_ecodorp.jpg
     />
-  </div>
 
+    <BannerBetween btnText="Naar de vragemuur"/>
+  </div>
 </template>
 
 <script>
@@ -42,9 +41,6 @@
   import TextblockLeft from "@/components/TextblockLeft"
   import TextblockRight from "@/components/TextblockRight"
   import BannerBetween from '@/components/BannerBetween.vue';
-
-
-
 
   export default {
     name: 'About',

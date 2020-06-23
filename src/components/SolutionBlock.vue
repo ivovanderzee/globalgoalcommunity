@@ -111,9 +111,25 @@
 @import "https://cdn.jsdelivr.net/npm/animate.css@4.0.0";
 
     ul{
-        
+
         list-style-type: none;
 
+    }
+
+    .Wrapper{
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Wrapper-centre{
+        width: 80vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
   .filter{

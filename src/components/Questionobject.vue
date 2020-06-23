@@ -51,6 +51,22 @@
 </script>
 
 <style scoped>
+    .Wrapper{
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Wrapper-centre{
+        width: 80vw;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .SolutionBlock{
         display: flex;
         justify-content: space-between;
