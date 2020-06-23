@@ -6,7 +6,7 @@
                 <input type="text" id="fname" name="fname" placeholder="Hoe kan ik mijn eigen eten..." >
                 <GreenButton btnText="Zoeken"/>
             </div>
-            <router-link to="/about"> <p>Nog niet bekend met de SDG’s? Hier lees je er meer over <i class="fas fa-angle-right"></i></p> </router-link>
+            <router-link to="/about"> <p>Lees hier meer over de SDG's. <i class="fas fa-angle-right"></i></p> </router-link>
         </div>
 
 <!--        <div class="HomeHeader-gbalk"></div>-->
@@ -37,7 +37,7 @@
 <style scoped>
     .HomeHeader{
         width: 100vw;
-        height: 78vh;
+        height: 74vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -64,7 +64,8 @@
 
     .HomeHeader-input{
         display: flex;
-        margin: 30px 0;
+        margin: 40px 0;
+        text-align: right;
     }
 
     input{
