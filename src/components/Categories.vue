@@ -19,7 +19,7 @@
  
 
     <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
-             <div class="HomeCategories-SDG-icon" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
+             <div class="HomeCategories-SDG-icon" :class="{active : activeIcon == sdg.sdg_id}" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
          
     </slide>
   </carousel>
@@ -37,6 +37,7 @@
         el: '#example',
         data(){
             return{
+                activeIcon: 0,
                 sdgs: [],
                 sdg: {
                     sdg_id: null,
@@ -72,7 +73,9 @@
 
 <style scoped>
 
-
+.activeStateIcon{
+    
+}
 
 .sdgCategoriesSlider{
         margin-top: 30px;
@@ -134,7 +137,6 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 1
      height: 80px;
     z-index: 10;
     color: #42925D;
-    
     width: 5vw;
    
 }

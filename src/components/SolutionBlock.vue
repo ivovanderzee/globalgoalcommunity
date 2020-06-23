@@ -8,11 +8,12 @@
                         <li :class="{active: activeItem == 2}" @click='filterPosts("highlight"); setActive(2);'>Uitgelicht door anderen</li>
                         <li :class="{active: activeItem == 3}" @click='filterPosts("recommended"); setActive(3);'>Aangeraden door ons</li>
                         <li :class="{active: activeItem == 4}" @click='filterPosts("podcast"); setActive(4);'>Podcasts</li>
+                 
                 </ul>
-                <div>
-                    <GreenButton btn-text="Filter"></GreenButton>
-                </div>
-            </div>
+
+               
+               </div> 
+
 
                 <div class="SolutionBlock">
 
@@ -37,13 +38,16 @@
 
 <script>
 
-   import { db } from '../main'
-       import GreenButton from "./GreenButton";
+   import { db } from '../main';
+ 
+
+    
+    
 
     export default {
         data(){
             return{
-                activeItem: 0,
+                activeItem: 1,
                 filter: '',
                 posts: [],
                 post: {
@@ -57,11 +61,6 @@
             }
         },
 
-components: {
-            GreenButton,
-
-        },
-
   computed: {
   
     filteredPosts: function() {
@@ -69,6 +68,10 @@ components: {
         return post.category.match(this.filter);
       });
     }
+  },
+
+   mounted(){
+        this.filterPosts('new');
   },
 
         created() {
@@ -86,7 +89,7 @@ components: {
              
              this.filter = category;
              console.log(this.filter);
-           
+          
 
             }, 
 
@@ -102,6 +105,9 @@ components: {
 </script>
 
 <style scoped>
+
+
+
 @import "https://cdn.jsdelivr.net/npm/animate.css@4.0.0";
 
     ul{
@@ -113,7 +119,7 @@ components: {
   .filter{
         width: 100%;
         height: 4vh;
-        margin-bottom: 3vw;
+        margin-bottom: 3vh;
         margin-top: 5vw;
         display: flex;
         justify-content: space-between;
@@ -122,18 +128,28 @@ components: {
 
     .filter-item{
         display: flex;
-    
+       
         justify-content: center;
         align-items: center;
         list-style-position: none;
+        transition: 0.4s;
     }
 
     .filter-item li{
         margin-right: 50px;
+        margin: 30px;
+        padding-bottom: 10px;
+        
+        
     }
 
     .active{
         font-weight: bold;
+        margin-right: 50px;
+        border-bottom-width: 3px;
+        border-bottom-color: #388E3C;
+        border-bottom-style: solid;
+      
     }
 
     .SolutionBlock{
@@ -141,6 +157,7 @@ components: {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        
     }
 
     .SolutionBlock-block{
