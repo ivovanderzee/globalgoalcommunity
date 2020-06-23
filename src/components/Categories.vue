@@ -1,8 +1,6 @@
 <template>
     <div class="sdgCategoriesSlider">
-
-
-<div class="buttonWrapper">
+        <div class="buttonWrapper">
 
         <div @click="prevSlide" id="buttonLeft">
         <i  class="fas fa-chevron-left fa-lg"></i>
@@ -12,21 +10,14 @@
         <i  class="fas fa-chevron-right fa-lg"></i>
         </div>
       
-      </div>
+        </div>
    
-    <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" >
-     
- 
-
-    <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
-             <div class="HomeCategories-SDG-icon" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
-         
-    </slide>
-  </carousel>
-
-  
-  
-  </div>
+        <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" >
+            <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
+                     <div class="HomeCategories-SDG-icon" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
+            </slide>
+        </carousel>
+    </div>
 </template>
 
 <script>

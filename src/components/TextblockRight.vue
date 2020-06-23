@@ -1,6 +1,6 @@
 <template>
-    <div class="WrapperR">
-        <div class="Wrapper-centre-green">
+    <div class="Wrapper">
+        <div class="Wrapper-centre-lgreen">
             <div id="TextblockR">
                 <div class="ImageR-colom">
                     <img :src="require('@/assets/' + imageName + '')" />
@@ -27,23 +27,30 @@
     }
 </script>
 
-<style>
-    .WrapperR{
+<style scoped>
+    .Wrapper{
         width: 100%;
         height: auto;
-        background-color: #388E3C;
+        background-color: #C8E6C9;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
+    .Wrapper-centre-lgreen{
+        width: 80vw;
+        background-color: #C8E6C9;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     #TextblockR{
-        width: 100%;
         margin: 10vh;
         display: flex;
-        background-color: #388E3C;
-        color:White;
-        justify-content: space-between;
+        background-color: #C8E6C9;
+        color: black;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: row;
     }

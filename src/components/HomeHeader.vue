@@ -37,18 +37,20 @@
 <style scoped>
     .HomeHeader{
         width: 100vw;
-        height: 74vh;
+        height: 77vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         background-color: #388E3C;
-        background-size: 100%;
+        background-position: bottom;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
     .HomeHeader h1{
         width: 40vw;
+        margin-top: -100px;
         text-align: left;
         font-size: 50px;
     }
@@ -64,7 +66,7 @@
 
     .HomeHeader-input{
         display: flex;
-        margin: 40px 0;
+        margin: 20px 0;
         text-align: right;
     }
 

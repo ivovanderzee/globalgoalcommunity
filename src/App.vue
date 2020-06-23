@@ -2,18 +2,22 @@
     <div id="app">
         <div id="nav">
             <router-link to="/"><img src="./assets/logoGGC.png"></router-link>
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">Over ons</router-link> |
-            <router-link to="/event">Events</router-link> |
-            <router-link to="/question">Vragenmuur</router-link> |
-            <router-link to="/ranking">Ranking</router-link> |
-            <router-link to="/login">Login</router-link> |
-<!--            <router-link to="/SignUp">Meld aan</router-link> |-->
+            <div class="routers">
+                <router-link to="/">Home</router-link> |
+                <router-link to="/about">Over ons</router-link> |
+                <router-link to="/event">Events</router-link> |
+                <router-link to="/question">Vragenmuur</router-link> |
+                <router-link to="/ranking">Ranking</router-link>
+            </div>
+
+            <div>
+                <router-link to="/signup">Registeren</router-link>
+                <router-link to="/login" class="loginBtn">Login</router-link>
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
 
-        <div class="extraBalk">
-            x
-        </div>
+        <div class="extraBalk"> x </div>
 
         <router-view @authenticated="setAuthenticated" />
 
@@ -108,18 +112,19 @@
     }
 
     #nav {
-        padding: 10px 0;
+        padding: 5px 0;
         position: fixed;
         width: 100%;
         background-color: white;
         z-index: 9999;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        box-shadow: 0 0 10px #c6c6c6;
     }
 
     #nav img{
-        height: 30px;
+        height: 40px;
         margin-right: 5vw;
     }
 
@@ -133,6 +138,22 @@
         color: #388E3C;
     }
 
+    .routers{
+        width: 700px;
+    }
+
+    .loginBtn{
+        /*background-color: #388E3C;*/
+        border: 3px solid #388E3C;
+        padding: 10px 30px;
+        border-radius: 10px;
+    }
+
+    .loginBtn:hover{
+        background-color: #388E3C;
+    }
+
+    /**/
     #footer{
         width: 100vw;
         padding-top: 30px;
@@ -143,8 +164,8 @@
         flex-direction: column;
     }
 
-
     #footer-context{
+        width: 60vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -202,72 +223,9 @@
     }
 
     .extraBalk{
-        background-color: red;
         width: 100vw;
         padding: 25px 0;
     }
 
-    /*--------------*/
-    .Wrapper{
-        width: 100vw;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .Wrapper-gray{
-        width: 100vw;
-        background-color: #EBEBEB;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .Wrapper-green{
-        width: 100vw;
-        background-color: #388E3C;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .Wrapper-lgreen{
-        width: 100vw;
-        background-color: #C8E6C9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .Wrapper-centre{
-        width: 80vw;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .Wrapper-centre-gray{
-        width: 80vw;
-        background-color: #EBEBEB;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .Wrapper-centre-lgreen{
-        width: 80vw;
-        background-color: #C8E6C9;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .Wrapper-centre-green{
-        width: 70vw;
-        background-color: #388E3C;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
 </style>
