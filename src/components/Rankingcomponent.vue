@@ -7,14 +7,14 @@
                     <h2>{{ ranking.points }} </h2>
                     <p>{{ ranking.text }}</p>
                     <div class="QuestionPost-text-info">
-                        <p><span class="bold">Tags:</span> <span class="Color-green">{{ ranking.tags }}</span></p>
-                        <p><span class="Color-gray">8 weken geleden | laatste reageersel {{ question.family }} </span> </p>
+                        <p><span class="bold">Ranking:</span> <span class="Color-green">{{ ranking.tags }}</span></p>
+                        <p><span class="Color-gray">Family: {{ ranking.family }} </span> </p>
                     </div>
                 </div>
 
                 <div class="QuestionPost-button">
-                    <GreenButton btnText="Reageren"/>
-                    <p><span class="bold">of</span> Global Rankings</p>
+                    <GreenButton btnText="Naar Family"/>
+                    <p><span class="bold">Global</span> Ranking List</p>
                 </div>
             </div>
           </div>
@@ -27,7 +27,7 @@
 
 
     export default {
-        name: 'Rankingscomponent',
+        name: 'QuestionPost',
         props: {
             btnText: String
         },
@@ -58,7 +58,7 @@
 
 <style scoped>
     .QuestionPost{
-        height: 100px;
+        height: 130px;
         width: auto;
         padding: 20px;
         background-color: white;
@@ -86,7 +86,7 @@
     }
 
     .QuestionPost-image{
-        width: 200px;
+        width: 210px;
         background-color: #dfdfdf;
         height: 110px;
         background-size: cover ;

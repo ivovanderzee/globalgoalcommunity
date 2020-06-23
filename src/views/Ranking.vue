@@ -2,18 +2,18 @@
     <div>
         <Header Text="Ranking" />
         <Rankingcomponent></Rankingcomponent>
-        <ButtonMore></ButtonMore>
-        <event-questionwall></event-questionwall>
         <AddFamily></AddFamily>
+        <BannerFamily></BannerFamily>
+
     </div>
 </template>
 
 <script>
     import Header from '@/components/Header.vue'
     import Rankingcomponent from '@/components/Rankingcomponent.vue'
-    import EventQuestionwall from '@/components/EventsQuestionwall.vue'
     import AddFamily from "../components/AddFamily";
-    import ButtonMore from "../components/ButtonMore";
+    import BannerFamily from "../components/BannerFamily";
+   
 
 
     export default {
@@ -22,7 +22,7 @@
             AddFamily,
             Header,
             Rankingcomponent,
-            EventQuestionwall,
-            ButtonMore,
+            BannerFamily,
+          
         }}
 </script>
