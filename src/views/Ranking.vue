@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header Text="Ranking" />
-        <question-post></question-post>
+        <Rankingcomponent></Rankingcomponent>
         <ButtonMore></ButtonMore>
         <event-questionwall></event-questionwall>
         <AddFamily></AddFamily>
@@ -10,7 +10,7 @@
 
 <script>
     import Header from '@/components/Header.vue'
-    import QuestionPost from '@/components/QuestionPost.vue'
+    import Rankingcomponent from '@/components/Rankingcomponent.vue'
     import EventQuestionwall from '@/components/EventsQuestionwall.vue'
     import AddFamily from "../components/AddFamily";
     import ButtonMore from "../components/ButtonMore";
@@ -21,7 +21,7 @@
         components: {
             AddFamily,
             Header,
-            QuestionPost,
+            Rankingcomponent,
             EventQuestionwall,
             ButtonMore,
         }}
