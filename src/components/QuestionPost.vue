@@ -1,7 +1,6 @@
 <template>
     <div class="Wrapper">
-        <div class="Wrapper-centre">
-
+        <div Class="Wrapper-centre">
             <div class="QuestionPost"  v-for="question in questions" v-bind:key="question.question_id" >
                 <div class="QuestionPost-image" :style="{backgroundImage:`url(${question.image})`}"></div>
                 <div  class="QuestionPost-text">
@@ -18,8 +17,7 @@
                     <p><span class="bold">99</span> reageersels</p>
                 </div>
             </div>
-
-        </div>
+          </div>
     </div>
 </template>
 
@@ -27,13 +25,14 @@
     import GreenButton from "./GreenButton";
     import {db} from "../main";
 
+
     export default {
         name: 'QuestionPost',
         props: {
             btnText: String
         },
         components: {
-            GreenButton
+            GreenButton,
         },
         data(){
             return{
