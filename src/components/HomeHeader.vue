@@ -1,4 +1,5 @@
 <template>
+
     <div :style="cssProps" class="HomeHeader">
         <div class="HomeHeader-wrapper" >
             <h1>Het kennisplatform voor het delen van duurzame SDG oplossingen</h1>
@@ -9,12 +10,22 @@
             <router-link to="/about"> <p>Lees hier meer over de SDG's. <i class="fas fa-angle-right"></i></p> </router-link>
         </div>
 
+        <div class="arrow">
+
+  <bouncingArrow></bouncingArrow>
+
+        </div>
+  
+
 <!--        <div class="HomeHeader-gbalk"></div>-->
-    </div>
+  </div>
+  
+
 </template>
 
 <script>
     import GreenButton from "./GreenButton";
+    import bouncingArrow from "./bouncingArrow"
 
     export default {
         name: 'HomeHeader',
@@ -22,7 +33,8 @@
             btnText: String
         },
         components: {
-            GreenButton
+            GreenButton,
+            bouncingArrow
         },
         data() {
             return {
@@ -35,6 +47,14 @@
 </script>
 
 <style scoped>
+
+.arrow{
+    position: absolute;
+    margin-top: 34vh;
+    left: 0;
+    right: 0;
+}
+
     .HomeHeader{
         width: 100vw;
         height: 77vh;
@@ -46,6 +66,7 @@
         background-position: bottom;
         background-size: cover;
         background-repeat: no-repeat;
+       
     }
 
     .HomeHeader h1{

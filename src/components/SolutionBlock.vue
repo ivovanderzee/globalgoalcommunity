@@ -14,7 +14,7 @@
                
                </div> 
 
-
+              
                 <div class="SolutionBlock">
 
                    <div class="SolutionBlock-block animate__bounce" v-for="post in filteredPosts" v-bind:key="post.post_id">
@@ -40,10 +40,6 @@
 
    import { db } from '../main';
  
-
-    
-    
-
     export default {
         data(){
             return{

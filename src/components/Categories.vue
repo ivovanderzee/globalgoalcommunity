@@ -11,29 +11,15 @@
         </div>
       
         </div>
-   
-<<<<<<< HEAD
-    <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" >
-     
- 
 
-    <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
-             <div class="HomeCategories-SDG-icon" :class="{active : activeIcon == sdg.sdg_id}" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
-         
-    </slide>
-  </carousel>
-
-  
-  
-  </div>
-=======
-        <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" >
+        <carousel ref="carousel" data-ref="carousel" :loop="true" :spacePadding="20" :per-page="10" :scrollPerPage="false" :paginationEnabled="false" 
+        :navigate-to="someLocalProperty" :mouse-drag="true" >
             <slide class="sdgItem" v-for="sdg in sdgs" v-bind:key="sdg.sdg_id">
                      <div class="HomeCategories-SDG-icon" :style="{backgroundImage:`url(${sdg.icon})`}"></div>
             </slide>
         </carousel>
+
     </div>
->>>>>>> 920fa8f538055ca741a902bead0d971764b7af42
 </template>
 
 <script>
